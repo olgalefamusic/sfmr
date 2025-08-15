@@ -1,29 +1,285 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Σύλλογος Φίλων της Μουσικής Ραφήνας</title>
-<link rel="stylesheet" href="css/main_style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Σύλλογος Φίλων Μουσικής Ραφήνας</title>
+  <meta name="description" content="Επίσημη ιστοσελίδα του Συλλόγου Φίλων Μουσικής Ραφήνας. Εκδηλώσεις, νέα, δράσεις και εγγραφές μελών.">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&family=Noto+Sans+Greek:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-<header>
-<h1>Καλωσορίσατε στον Σύλλογος Φίλων της Μουσικής Ραφήνας</h1>
-<nav>
-<ul>
-<li><a href="index.html">Αρχική</a></li>
-<li><a href="about.html">Σχετικά με τον Σύλλογο</a></li>
-<li><a href="program-news.html">Το Πρόγραμμά μας & Νέα</a></li>
-<li><a href="contact.html">Επικοινωνία</a></li>
-<li><a href="register.html">Εγγραφή Μελών</a></li>
-</ul>
-</nav>
-</header>
-<main>
-<p>Εδώ θα μπει ένα καλωσόρισμα και μια μικρή παρουσίαση του συλλόγου...</p>
-</main>
-<footer>
-<p>&copy; 2025 Σύλλογος Φίλων της Μουσικής Ραφήνας</p>
-</footer>
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="#" class="brand">
+        <span class="logo-icon" aria-hidden="true">
+          <!-- Simple music note SVG -->
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 3v10.55a4 4 0 1 1-2-3.45V6h8V3h-6z"></path>
+          </svg>
+        </span>
+        <span class="brand-text">Σύλλογος Φίλων Μουσικής Ραφήνας</span>
+      </a>
+      <nav class="main-nav" aria-label="Κύρια πλοήγηση">
+        <button class="nav-toggle" aria-label="Άνοιγμα μενού" aria-expanded="false">☰</button>
+        <ul class="nav-list">
+          <li><a class="active" href="#">Αρχική σελίδα</a></li>
+          <li><a href="#">Σχετικά με τον σύλλογο</a></li>
+          <li><a href="#">Εκδηλώσεις & Νέα</a></li>
+          <li><a href="#">Επικοινωνία</a></li>
+          <li><a class="btn btn-small" href="#">Εγγραφή μελών</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1>Η μουσική ενώνει την κοινότητά μας</h1>
+        <p>Ο Σύλλογος Φίλων Μουσικής Ραφήνας προάγει τη ζωντανή μουσική παράδοση μέσα από εκδηλώσεις, εκπαιδευτικά προγράμματα και συνεργασίες με καλλιτέχνες.</p>
+        <div class="hero-actions">
+          <a href="#" class="btn btn-primary">Δες τις εκδηλώσεις</a>
+          <a href="#" class="btn btn-ghost">Μάθε για τον σύλλογο</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <!-- Mockup image: simple decorative SVG with music lines -->
+        <div class="hero-card">
+          <svg viewBox="0 0 520 340" role="img" aria-label="Μουσικό μοτίβο">
+            <defs>
+              <linearGradient id="grad1" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0%" stop-color="var(--brand-300)"/>
+                <stop offset="100%" stop-color="var(--brand-500)"/>
+              </linearGradient>
+            </defs>
+            <rect x="0" y="0" width="520" height="340" rx="18" fill="var(--surface-2)"/>
+            <g stroke="url(#grad1)" stroke-width="6" fill="none" opacity="0.9">
+              <path d="M10,80 C120,20 220,140 340,70 C410,30 470,90 510,50" />
+              <path d="M10,160 C120,100 220,220 340,150 C410,110 470,170 510,130" />
+              <path d="M10,240 C120,180 220,300 340,230 C410,190 470,250 510,210" />
+            </g>
+            <g fill="var(--brand-500)" opacity="0.9">
+              <circle cx="120" cy="70" r="10"/>
+              <circle cx="260" cy="150" r="10"/>
+              <circle cx="400" cy="230" r="10"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section about">
+    <div class="container grid two">
+      <div>
+        <h2>Σχετικά με εμάς</h2>
+        <p>Ο σύλλογος ιδρύθηκε για να στηρίξει και να αναδείξει τη μουσική κουλτούρα της Ραφήνας και της ευρύτερης περιοχής, με δράσεις που συνδέουν επαγγελματίες μουσικούς, σπουδαστές και φίλους της μουσικής.</p>
+        <ul class="icon-list">
+          <li>
+            <span class="icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.12 6.49H21l-5.44 3.95L16.88 21 12 16.9 7.12 21l1.32-7.56L3 9.49h6.88z"/></svg>
+            </span>
+            Προώθηση μουσικής παιδείας για όλες τις ηλικίες.
+          </li>
+          <li>
+            <span class="icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H8c-1.1 0-2 .9-2 2v3H4c-1.1 0-2 .9-2 2v5h2v6h6v-6h4v6h6v-6h2V9c0-1.1-.9-2-2-2h-2V4c0-1.1-.9-2-2-2z"/></svg>
+            </span>
+            Συνεργασίες με τοπικούς φορείς και καλλιτέχνες.
+          </li>
+          <li>
+            <span class="icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 100 18 9 9 0 000-18zm1 13h-2v-2h2v2zm0-4h-2V7h2v5z"/></svg>
+            </span>
+            Διαφάνεια, εθελοντισμός και συμμετοχή της κοινότητας.
+          </li>
+        </ul>
+        <a href="#" class="btn">Περισσότερα</a>
+      </div>
+      <div class="about-media">
+        <div class="photo-mock"></div>
+        <div class="photo-mock small"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events & News -->
+  <section class="section events">
+    <div class="container">
+      <div class="section-head">
+        <h2>Εκδηλώσεις & Νέα</h2>
+        <a href="#" class="link-more">Δες όλα</a>
+      </div>
+      <div class="cards grid three">
+        <!-- Card 1 -->
+        <article class="card">
+          <div class="card-media"></div>
+          <div class="card-body">
+            <h3>Συναυλία Θερινής Περιόδου</h3>
+            <p>Μια βραδιά αφιερωμένη στην ελληνική παραδοσιακή και λόγια μουσική, με συμμετοχή τοπικών μουσικών σχημάτων.</p>
+            <ul class="meta">
+              <li><span class="dot"></span> Ραφήνα</li>
+              <li><span class="dot"></span> 15 Σεπτεμβρίου</li>
+            </ul>
+            <a href="#" class="card-link">Περισσότερα</a>
+          </div>
+        </article>
+        <!-- Card 2 -->
+        <article class="card">
+          <div class="card-media alt"></div>
+          <div class="card-body">
+            <h3>Σεμινάριο Ρυθμολογίας</h3>
+            <p>Εργαστήριο για βασικές έως προχωρημένες έννοιες ρυθμού, κατάλληλο για μαθητές και εκπαιδευτικούς.</p>
+            <ul class="meta">
+              <li><span class="dot"></span> Πολιτιστικό Κέντρο</li>
+              <li><span class="dot"></span> 28 Οκτωβρίου</li>
+            </ul>
+            <a href="#" class="card-link">Κράτηση θέσης</a>
+          </div>
+        </article>
+        <!-- Card 3 -->
+        <article class="card">
+          <div class="card-media alt2"></div>
+          <div class="card-body">
+            <h3>Ανακοίνωση Νέων Μελών</h3>
+            <p>Καλωσορίζουμε τους νέους φίλους του συλλόγου και παρουσιάζουμε τις επόμενες δράσεις.</p>
+            <ul class="meta">
+              <li><span class="dot"></span> Ανακοίνωση</li>
+              <li><span class="dot"></span> Τρέχον Μήνας</li>
+            </ul>
+            <a href="#" class="card-link">Διάβασε το άρθρο</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Membership CTA -->
+  <section class="section cta">
+    <div class="container cta-wrap">
+      <div class="cta-text">
+        <h2>Γίνε μέλος</h2>
+        <p>Στήριξε την αποστολή μας, απόλαυσε προνόμια μελών, και βοήθησε να ακουστεί η μουσική πιο δυνατά στη Ραφήνα.</p>
+      </div>
+      <a href="#" class="btn btn-primary btn-large">Εγγραφή μελών</a>
+    </div>
+  </section>
+
+  <!-- Partners / Sponsors -->
+  <section class="section partners">
+    <div class="container">
+      <h2>Χορηγοί & Συνεργασίες</h2>
+      <div class="logo-row">
+        <div class="logo-pill">Armonia</div>
+        <div class="logo-pill">Rhythm Lab</div>
+        <div class="logo-pill">Rafina Arts</div>
+        <div class="logo-pill">Melodia Studio</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Preview -->
+  <section class="section contact">
+    <div class="container grid two">
+      <div>
+        <h2>Επικοινωνία</h2>
+        <p>Θέλεις να συνεργαστούμε, να στηρίξεις μια εκδήλωση, ή να μάθεις περισσότερα; Περιμένουμε το μήνυμά σου.</p>
+        <ul class="contact-list">
+          <li>
+            <span class="icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.05-.24 11.72 11.72 0 003.68.59 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h2.47a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.05l-2.2 2.2z"/></svg>
+            </span>
+            +30 210 000 0000
+          </li>
+          <li>
+            <span class="icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12.713l-11.99-7.2v12.48h24V5.513L12 12.713zm0-2.426l11.99-7.2H.01l11.99 7.2z"/></svg>
+            </span>
+            info@musicrafina.gr
+          </li>
+          <li>
+            <span class="icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a8 8 0 00-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 00-8-8zm0 10.5A2.5 2.5 0 119.5 10 2.5 2.5 0 0112 12.5z"/></svg>
+            </span>
+            Ραφήνα, Αττική
+          </li>
+        </ul>
+        <a href="#" class="btn btn-ghost">Φόρμα επικοινωνίας</a>
+      </div>
+      <div class="map-mock">
+        <div class="map-box">Χάρτης (mockup)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container foot-grid">
+      <div class="foot-brand">
+        <div class="brand-inline">
+          <span class="logo-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 3v10.55a4 4 0 1 1-2-3.45V6h8V3h-6z"></path>
+            </svg>
+          </span>
+          <strong>ΣΦΜ Ραφήνας</strong>
+        </div>
+        <p>Καλλιεργούμε τη μουσική παιδεία και φέρνουμε κοντά την κοινότητα μέσα από δράσεις, σεμινάρια και συναυλίες.</p>
+      </div>
+      <div class="foot-links">
+        <h4>Μενού</h4>
+        <ul>
+          <li><a href="#">Αρχική σελίδα</a></li>
+          <li><a href="#">Σχετικά με τον σύλλογο</a></li>
+          <li><a href="#">Εκδηλώσεις & Νέα</a></li>
+          <li><a href="#">Επικοινωνία</a></li>
+          <li><a href="#">Εγγραφή μελών</a></li>
+        </ul>
+      </div>
+      <div class="foot-news">
+        <h4>Ενημερώσεις</h4>
+        <p>Εγγράψου στο newsletter μας για να μαθαίνεις πρώτος τα νέα και τις εκδηλώσεις.</p>
+        <form class="newsletter" action="#" method="post">
+          <input type="email" name="email" placeholder="Το email σου" aria-label="Email">
+          <button type="submit" class="btn btn-small">Εγγραφή</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-base">
+      <div class="container base-wrap">
+        <span>© <span id="year"></span> Σύλλογος Φίλων Μουσικής Ραφήνας</span>
+        <span class="sep">•</span>
+        <a href="#">Όροι χρήσης</a>
+        <span class="sep">•</span>
+        <a href="#">Πολιτική απορρήτου</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const toggle = document.querySelector('.nav-toggle');
+    const navList = document.querySelector('.nav-list');
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      navList.classList.toggle('open');
+    });
+
+    // Dynamic year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Header on scroll
+    const header = document.querySelector('.site-header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    });
+  </script>
 </body>
 </html>
