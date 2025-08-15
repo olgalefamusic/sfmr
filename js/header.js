@@ -1,49 +1,143 @@
-/* Header content injection script */  
+/**
+ * Header Component for Σύλλογος Φίλων Μουσικής Ραφήνας
+ * This file creates and injects the header navigation into the page
+ */
 
-// HTML for header
-const headerHTML = `
-<header class="site-header">
-  <div class="container nav-wrap">
-    <a href="#" class="brand">
-      <img src="images/sfmr-logo.jpg" alt="Λογότυπο Σύλλογος Φίλων Μουσικής Ραφήνας" class="brand-logo" />
-      <span class="brand-text">Σύλλογος Φίλων Μουσικής Ραφήνας</span>
-    </a>
-    <nav class="main-nav" aria-label="Κύρια πλοήγηση">
-      <button class="nav-toggle" aria-label="Άνοιγμα μενού" aria-expanded="false">&#9776;</button>
-      <ul class="nav-list">
-        <li><a class="active" href="#">Αρχική σελίδα</a></li>
-        <li><a href="#">Σχετικά με τον σύλλογο</a></li>
-        <li><a href="#">Εκδηλώσεις & Νέα</a></li>
-        <li><a href="#">Επικοινωνία</a></li>
-        <li><a class="btn btn-small" href="#">Εγγραφή μελών</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-`;
-
-// Insert at top of the body
-window.addEventListener('DOMContentLoaded', () => {
-  const body = document.body;
-  const oldHeader = document.querySelector('.site-header');
-  if (oldHeader) oldHeader.remove();
-  const wrapper = document.createElement('div');
-  wrapper.innerHTML = headerHTML;
-  body.insertBefore(wrapper.firstChild, body.firstChild);
-
-  // Enable mobile nav toggle
-  const toggle = document.querySelector('.nav-toggle');
-  const navList = document.querySelector('.nav-list');
-  toggle.addEventListener('click', () => {
-    const expanded = toggle.getAttribute('aria-expanded') === 'true';
-    toggle.setAttribute('aria-expanded', String(!expanded));
-    navList.classList.toggle('open');
-  });
-
-  // Header scroll class toggle
-  const header = document.querySelector('.site-header');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 10) header.classList.add('scrolled');
-    else header.classList.remove('scrolled');
-  });
+document.addEventListener('DOMContentLoaded', function() {
+    const headerHTML = `
+        <header>
+            <div class="container">
+                <div class="header-content">
+                    <img src="images/sfmr-logo.jpg" alt="ΣΦΜΡ" class="header-logo">
+                    <nav>
+                        <ul>
+                            <li><a href="#home" data-section="home">Αρχική</a></li>
+                            <li><a href="#about" data-section="about">Σχετικά</a></li>
+                            <li><a href="#events" data-section="events">Εκδηλώσεις & Νέα</a></li>
+                            <li><a href="#contact" data-section="contact">Επικοινωνία</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+    `;
+    
+    // Insert header into the page
+    const headerContainer = document.getElementById('header-container');
+    if (headerContainer) {
+        headerContainer.innerHTML = headerHTML;
+    }
+    
+    // Add smooth scrolling functionality
+    const navLinks = document.querySelectorAll('nav a[data-section]');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const sectionId = this.getAttribute('data-section');
+            let targetElement;
+            
+            // Map sections to actual elements
+            switch(sectionId) {
+                case 'home':
+                    targetElement = document.querySelector('.hero');
+                    break;
+                case 'about':
+                    targetElement = document.querySelector('.about');
+                    break;
+                case 'events':
+                    targetElement = document.querySelector('.events');
+                    break;
+                case 'contact':
+                    targetElement = document.querySelector('.contact');
+                    break;
+                default:
+                    targetElement = document.body;
+            }
+            
+            if (targetElement) {
+                const headerHeight = document.querySelector('header').offsetHeight;
+                const targetPosition = targetElement.offsetTop - headerHeight;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+                
+                // Update active nav item
+                navLinks.forEach(navLink => navLink.classList.remove('active'));
+                this.classList.add('active');
+            }
+        });
+    });
+    
+    // Highlight active section on scroll
+    window.addEventListener('scroll', function() {
+        const sections = [
+            { element: document.querySelector('.hero'), id: 'home' },
+            { element: document.querySelector('.about'), id: 'about' },
+            { element: document.querySelector('.events'), id: 'events' },
+            { element: document.querySelector('.contact'), id: 'contact' }
+        ];
+        
+        const scrollPos = window.scrollY + 100; // Offset for header
+        
+        sections.forEach(section => {
+            if (section.element) {
+                const sectionTop = section.element.offsetTop;
+                const sectionHeight = section.element.offsetHeight;
+                
+                if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                    // Remove active class from all nav links
+                    navLinks.forEach(link => link.classList.remove('active'));
+                    
+                    // Add active class to current section nav link
+                    const activeLink = document.querySelector(`nav a[data-section="${section.id}"]`);
+                    if (activeLink) {
+                        activeLink.classList.add('active');
+                    }
+                }
+            }
+        });
+    });
+    
+    // Mobile menu toggle (if needed for future mobile improvements)
+    let mobileMenuOpen = false;
+    
+    // Add mobile menu button for smaller screens
+    function addMobileMenu() {
+        const nav = document.querySelector('nav');
+        const mobileMenuBtn = document.createElement('button');
+        mobileMenuBtn.classList.add('mobile-menu-btn');
+        mobileMenuBtn.innerHTML = '☰';
+        mobileMenuBtn.setAttribute('aria-label', 'Toggle navigation menu');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            const navUl = nav.querySelector('ul');
+            mobileMenuOpen = !mobileMenuOpen;
+            
+            if (mobileMenuOpen) {
+                navUl.classList.add('mobile-menu-open');
+                mobileMenuBtn.innerHTML = '✕';
+            } else {
+                navUl.classList.remove('mobile-menu-open');
+                mobileMenuBtn.innerHTML = '☰';
+            }
+        });
+        
+        nav.prepend(mobileMenuBtn);
+    }
+    
+    // Check if mobile menu is needed
+    function checkMobileMenu() {
+        if (window.innerWidth <= 768) {
+            if (!document.querySelector('.mobile-menu-btn')) {
+                addMobileMenu();
+            }
+        }
+    }
+    
+    // Initial check and window resize listener
+    checkMobileMenu();
+    window.addEventListener('resize', checkMobileMenu);
 });
