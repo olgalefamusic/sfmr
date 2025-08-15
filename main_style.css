@@ -1,1 +1,42 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Σύλλογος Φίλων της Μουσικής Ραφήνας</title>
+    <meta name="description" content="Σύλλογος Φίλων της Μουσικής Ραφήνας - Προαγωγή της μουσικής παιδείας και πολιτισμού">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="logo">
+                    <h1>Σύλλογος Φίλων της Μουσικής Ραφήνας</h1>
+                </div>
+                <nav class="nav">
+                    <button class="nav-toggle" id="navToggle">☰</button>
+                    <ul class="nav__list" id="navList">
+                        <li><a href="#home" class="nav__link active">Αρχική</a></li>
+                        <li><a href="#about" class="nav__link">Σχετικά με τον Σύλλογο</a></li>
+                        <li><a href="#work" class="nav__link">Το Έργο μας</a></li>
+                        <li><a href="#program" class="nav__link">Το Πρόγραμμά μας</a></li>
+                        <li><a href="#news" class="nav__link">Νέα & Ανακοινώσεις</a></li>
+                        <li><a href="#library" class="nav__link">Μουσική Βιβλιοθήκη</a></li>
+                        <li><a href="#partnerships" class="nav__link">Συνεργασίες</a></li>
+                        <li><a href="#membership" class="nav__link">Εγγραφή Μελών</a></li>
+                        <li><a href="#contact" class="nav__link">Επικοινωνία</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
 
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Home Section -->
+        <section id="home" class="section section--hero">
+            <div class="container">
+                <div class="hero">
+                    <h2 class="hero__title">Καλώς ήρθατε στον Σύλλογο Φίλων της Μουσικής Ραφήνας</h
