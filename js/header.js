@@ -1,4 +1,4 @@
-/* Header content injection script */ 
+/* Header content injection script */  
 
 // HTML for header
 const headerHTML = `
