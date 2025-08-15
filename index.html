@@ -1,244 +1,197 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Σύλλογος Φίλων Μουσικής Ραφήνας</title>
-  <meta name="description"
-        content="Επίσημη ιστοσελίδα του Συλλόγου Φίλων Μουσικής Ραφήνας. Εκδηλώσεις, συναυλίες και μουσική παιδεία στη Ραφήνα.">
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&family=Noto+Sans+Greek:wght@400;600;700&display=swap"
-        rel="stylesheet">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Σύλλογος Φίλων Μουσικής Ραφήνας</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-  <!-- Header will be injected by js/header.js -->
-  <header></header>
+    <div id="header-container"></div>
 
-  <!-- ==================== HERO ==================== -->
-  <section class="hero">
-    <div class="container hero-content">
-      <div class="hero-text">
-        <h1>Η μουσική ενώνει την κοινότητά μας</h1>
-        <p>Ο Σύλλογος Φίλων Μουσικής Ραφήνας προάγει τη ζωντανή μουσική παράδοση μέσα από συναυλίες,
-           εκπαιδευτικές δράσεις και συνεργασίες με διακεκριμένους καλλιτέχνες στο Ωδείο Μακτζώρτζ.</p>
-        <div class="hero-actions">
-          <a href="#" class="btn btn-primary">Δες τις συναυλίες</a>
-          <a href="#" class="btn btn-ghost">Μάθε για τον σύλλογο</a>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="logo-container">
+                <img src="images/sfmr-logo.jpg" alt="Σύλλογος Φίλων Μουσικής Ραφήνας" class="logo">
+            </div>
+            <h1>Καλώς ήρθατε στον Σύλλογο Φίλων Μουσικής Ραφήνας</h1>
+            <p class="hero-subtitle">Ενώνουμε τους λάτρεις της μουσικής στην όμορφη Ραφήνα</p>
         </div>
-      </div>
+    </section>
 
-      <div class="hero-media">
-        <!-- Decorative SVG -->
-        <div class="hero-card">
-          <svg viewBox="0 0 520 340" role="img" aria-label="Μουσικό μοτίβο">
-            <defs>
-              <linearGradient id="grad1" x1="0" x2="1" y1="0" y2="1">
-                <stop offset="0%" stop-color="var(--brand-300)"/>
-                <stop offset="100%" stop-color="var(--brand-500)"/>
-              </linearGradient>
-            </defs>
-            <rect x="0" y="0" width="520" height="340" rx="18" fill="var(--surface-2)"/>
-            <g stroke="url(#grad1)" stroke-width="6" fill="none" opacity="0.9">
-              <path d="M10,80 C120,20 220,140 340,70 C410,30 470,90 510,50" />
-              <path d="M10,160 C120,100 220,220 340,150 C410,110 470,170 510,130" />
-              <path d="M10,240 C120,180 220,300 340,230 C410,190 470,250 510,210" />
-            </g>
-            <g fill="var(--brand-500)" opacity="0.9">
-              <circle cx="120" cy="70" r="10"/>
-              <circle cx="260" cy="150" r="10"/>
-              <circle cx="400" cy="230" r="10"/>
-            </g>
-          </svg>
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <h2>Σχετικά με εμάς</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>Ο Σύλλογος Φίλων Μουσικής Ραφήνας αποτελεί έναν ζωντανό οργανισμό που προωθεί τη μουσική κουλτούρα στην περιοχή μας. Από την ίδρυσή μας, εργαζόμαστε με πάθος για να φέρουμε κοντά τους μουσικόφιλους και να δημιουργήσουμε ένα περιβάλλον όπου η μουσική ανθεί.</p>
+                    <p>Οι δραστηριότητές μας περιλαμβάνουν συναυλίες, μουσικά εργαστήρια, εκπαιδευτικά προγράμματα και πολιτιστικές εκδηλώσεις που εμπλουτίζουν τη ζωή της κοινότητάς μας.</p>
+                </div>
+                <div class="about-features">
+                    <div class="feature">
+                        <h3>🎵 Συναυλίες</h3>
+                        <p>Διοργανώνουμε τακτικές συναυλίες με τοπικούς και επώνυμους καλλιτέχνες</p>
+                    </div>
+                    <div class="feature">
+                        <h3>🎼 Εκπαίδευση</h3>
+                        <p>Προσφέρουμε μουσικά μαθήματα για όλες τις ηλικίες</p>
+                    </div>
+                    <div class="feature">
+                        <h3>🎭 Πολιτισμός</h3>
+                        <p>Προωθούμε τον ελληνικό πολιτισμό μέσω μουσικών εκδηλώσεων</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ==================== ABOUT ==================== -->
-  <section class="section about">
-    <div class="container grid two">
-      <div>
-        <h2>Σχετικά με εμάς</h2>
-        <p>Ο σύλλογός μας αναδεικνύει τη μουσική κουλτούρα της Ραφήνας μέσα από υψηλού επιπέδου συναυλίες
-           στο Ωδείο Μακτζώρτζ, φιλοξενώντας διακεκριμένους Έλληνες μουσικούς και συνθέτες.</p>
-
-        <ul class="icon-list">
-          <li>
-            <span class="icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 3l2.12 6.49H21l-5.44 3.95L16.88 21 12 16.9 7.12 21l1.32-7.56L3 9.49h6.88z"/>
-              </svg>
-            </span>
-            Συναυλίες με επώνυμους καλλιτέχνες και συνθέτες.
-          </li>
-          <li>
-            <span class="icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M20 2H8c-1.1 0-2 .9-2 2v3H4c-1.1 0-2 .9-2 2v5h2v6h6v-6h4v6h6v-6h2V9c0-1.1-.9-2-2-2h-2V4c0-1.1-.9-2-2-2z"/>
-              </svg>
-            </span>
-            Συνεργασίες με το Ωδείο Μακτζώρτζ και τοπικούς φορείς.
-          </li>
-          <li>
-            <span class="icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 3a9 9 0 100 18 9 9 0 000-18zm1 13h-2v-2h2v2zm0-4h-2V7h2v5z"/>
-              </svg>
-            </span>
-            Ελεύθερη είσοδος σε όλες τις εκδηλώσεις μας.
-          </li>
-        </ul>
-
-        <a href="#" class="btn">Περισσότερα</a>
-      </div>
-
-      <div class="about-media">
-        <div class="photo-mock"></div>
-        <div class="photo-mock small"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== EVENTS ==================== -->
-  <section class="section events">
-    <div class="container">
-      <div class="section-head">
-        <h2>Συναυλίες &amp; Εκδηλώσεις</h2>
-        <a href="#" class="link-more">Δες όλες</a>
-      </div>
-
-      <div class="cards grid three">
-        <!-- Card 1 -->
-        <article class="card">
-          <div class="card-media"></div>
-          <div class="card-body">
-            <h3>Ρεσιτάλ Πιάνου — Θέμης Μαυρογορδάτος</h3>
-            <p>Έργα Σατί, Ραχμάνινοφ και Γκριγκ σε μια εξαιρετική βραδιά κλασικής μουσικής
-               από έναν από τους κορυφαίους Έλληνες πιανίστες.</p>
-            <ul class="meta">
-              <li><span class="dot"></span> Ωδείο Μακτζώρτζ</li>
-              <li><span class="dot"></span> 24 Μαΐου 2025</li>
-            </ul>
-            <a href="#" class="card-link">Περισσότερα</a>
-          </div>
-        </article>
-
-        <!-- Card 2 -->
-        <article class="card">
-          <div class="card-media alt"></div>
-          <div class="card-body">
-            <h3>Αφιέρωμα σε Μεγάλους Έλληνες Συνθέτες</h3>
-            <p>Τραγούδια των Μίκη Θεοδωράκη, Μάνου Λοΐζου και Μάνου Χατζιδάκι με διακεκριμένους ερμηνευτές.</p>
-            <ul class="meta">
-              <li><span class="dot"></span> Αίθουσα Συναυλιών</li>
-              <li><span class="dot"></span> Επόμενη Εκδήλωση</li>
-            </ul>
-            <a href="#" class="card-link">Κρατήσεις</a>
-          </div>
-        </article>
-
-        <!-- Card 3 -->
-        <article class="card">
-          <div class="card-media alt2"></div>
-          <div class="card-body">
-            <h3>Κοπή Βασιλόπιτας &amp; Γενική Συνέλευση</h3>
-            <p>Ετήσια συνάντηση μελών με μουσικό πρόγραμμα και ανακοίνωση των δράσεων της νέας χρονιάς.</p>
-            <ul class="meta">
-              <li><span class="dot"></span> Φεβρουάριος</li>
-              <li><span class="dot"></span> Ετήσια Εκδήλωση</li>
-            </ul>
-            <a href="#" class="card-link">Περισσότερα</a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== CTA ==================== -->
-  <section class="section cta">
-    <div class="container cta-wrap">
-      <div class="cta-text">
-        <h2>Γίνε μέλος</h2>
-        <p>Στήριξε την αποστολή μας, απόλαυσε ελεύθερη είσοδο σε όλες τις συναυλίες,
-           και βοήθησε να ακουστεί η μουσική πιο δυνατά στη Ραφήνα.</p>
-      </div>
-      <a href="#" class="btn btn-primary btn-large">Εγγραφή μελών</a>
-    </div>
-  </section>
-
-  <!-- ==================== PARTNERS ==================== -->
-  <section class="section partners">
-    <div class="container">
-      <h2>Συνεργασίες</h2>
-      <div class="logo-row">
-        <div class="logo-pill">Ωδείο Μακτζώρτζ</div>
-        <div class="logo-pill">Δήμος Ραφήνας-Πικερμίου</div>
-        <div class="logo-pill">Φιλαρμονική Ραφήνας</div>
-        <div class="logo-pill">Τοπικοί Φορείς</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== CONTACT ==================== -->
-  <section class="section contact">
-    <div class="container grid two">
-      <div>
-        <h2>Επικοινωνία</h2>
-        <p>Για πληροφορίες σχετικά με τις συναυλίες μας, εγγραφή μελών ή συνεργασίες,
-           επικοινωνήστε μαζί μας.</p>
-
-        <ul class="contact-list">
-          <li>
-            <span class="icon" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.05-.24 11.72 11.72 0 003.68.59 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h2.47a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.05l-2.2 2.2z"/>
-              </svg>
-            </span>
-            +30 210 000 0000
-          </li>
-          <li>
-            <span class="icon" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 12.713l-11.99-7.2v12.48h24V5.513L12 12.713zm0-2.426l11.99-7.2H.01l11.99 7.2z"/>
-              </svg>
-            </span>
-            <a href="mailto:info@musicrafina.gr">info@musicrafina.gr</a>
-          </li>
-          <li>
-            <span class="icon" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2a8 8 0 00-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 00-8-8zm0 10.5A2.5 2.5 0 119.5 10 2.5 2.5 0 0112 12.5z"/>
-              </svg>
-            </span>
-            Ωδείο Μακτζώρτζ, Ευβοϊκού 35, Ραφήνα
-          </li>
-        </ul>
-
-        <div class="social-links">
-          <a href="https://www.facebook.com/sfmRafinas" target="_blank" class="btn btn-ghost">Facebook</a>
+    <!-- Events Section -->
+    <section class="events">
+        <div class="container">
+            <h2>Επερχόμενες Εκδηλώσεις</h2>
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">15</span>
+                        <span class="month">Σεπ</span>
+                    </div>
+                    <div class="event-info">
+                        <h3>Φθινοπωρινή Συναυλία</h3>
+                        <p>Βραδιά κλασικής μουσικής με το τοπικό μας όργανο</p>
+                        <span class="event-location">📍 Πολιτιστικό Κέντρο Ραφήνας</span>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">22</span>
+                        <span class="month">Σεπ</span>
+                    </div>
+                    <div class="event-info">
+                        <h3>Μουσικό Εργαστήρι</h3>
+                        <p>Εισαγωγή στη λαϊκή μουσική για αρχάριους</p>
+                        <span class="event-location">📍 Αίθουσα Συλλόγου</span>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">30</span>
+                        <span class="month">Σεπ</span>
+                    </div>
+                    <div class="event-info">
+                        <h3>Γενική Συνέλευση</h3>
+                        <p>Ετήσια συνάντηση των μελών του συλλόγου</p>
+                        <span class="event-location">📍 Δημαρχείο Ραφήνας</span>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
 
-      <div class="map-mock">
-        <div class="map-box">
-          Χάρτης Ωδείου Μακτζώρτζ<br>
-          <small>Ευβοϊκού 35, Ραφήνα</small>
+    <!-- News Section -->
+    <section class="news">
+        <div class="container">
+            <h2>Νέα & Ανακοινώσεις</h2>
+            <div class="news-grid">
+                <article class="news-item">
+                    <h3>Νέα Τμήματα Μουσικής</h3>
+                    <p class="news-date">10 Αυγούστου 2025</p>
+                    <p>Ο σύλλογός μας ανοίγει νέα τμήματα για παιδιά και ενήλικες. Εγγραφές ξεκινούν τον Σεπτέμβριο.</p>
+                </article>
+                <article class="news-item">
+                    <h3>Επιτυχημένη Καλοκαιρινή Συναυλία</h3>
+                    <p class="news-date">5 Αυγούστου 2025</p>
+                    <p>Με μεγάλη επιτυχία πραγματοποιήθηκε η καλοκαιρινή μας συναυλία στην παραλία της Ραφήνας.</p>
+                </article>
+                <article class="news-item">
+                    <h3>Νέα Μέλη Καλοδεχούμενα</h3>
+                    <p class="news-date">1 Αυγούστου 2025</p>
+                    <p>Καλούμε όλους τους φίλους της μουσικής να γίνουν μέλη του συλλόγου μας και να συμμετέχουν στις δραστηριότητές μας.</p>
+                </article>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer will be injected by js/footer.js -->
-  <footer></footer>
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <h2>Επικοινωνία</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>📍 Διεύθυνση</h3>
+                        <p>Κεντρική Πλατεία Ραφήνας<br>Ραφήνα, Αττική 19009</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>📞 Τηλέφωνο</h3>
+                        <p>+30 229 40 XXXXX</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>✉️ Email</h3>
+                        <p>info@sfmrafinas.gr</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>🕐 Ώρες Λειτουργίας</h3>
+                        <p>Δευτέρα - Παρασκευή: 18:00 - 21:00<br>Σάββατο: 10:00 - 13:00</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Στείλτε μας μήνυμα</h3>
+                    <form>
+                        <input type="text" placeholder="Όνομα" required>
+                        <input type="email" placeholder="Email" required>
+                        <input type="text" placeholder="Θέμα" required>
+                        <textarea placeholder="Μήνυμα" rows="5" required></textarea>
+                        <button type="submit">Αποστολή</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- JS (deferred so placeholders exist before execution) -->
-  <script src="js/header.js" defer></script>
-  <script src="js/footer.js" defer></script>
+    <div id="footer-container"></div>
+
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
 </body>
 </html>
+
+<script>
+// This would be the content of js/header.js
+document.addEventListener('DOMContentLoaded', function() {
+    const headerHTML = `
+        <header>
+            <div class="container">
+                <div class="header-content">
+                    <img src="images/sfmr-logo.jpg" alt="ΣΦΜΡ" class="header-logo">
+                    <nav>
+                        <ul>
+                            <li><a href="#home">Αρχική</a></li>
+                            <li><a href="#about">Σχετικά</a></li>
+                            <li><a href="#events">Εκδηλώσεις & Νέα</a></li>
+                            <li><a href="#contact">Επικοινωνία</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+    `;
+    
+    document.getElementById('header-container').innerHTML = headerHTML;
+});
+
+// This would be the content of js/footer.js
+document.addEventListener('DOMContentLoaded', function() {
+    const footerHTML = `
+        <footer>
+            <div class="container">
+                <p>&copy; 2025 Σύλλογος Φίλων Μουσικής Ραφήνας. Όλα τα δικαιώματα διατηρούνται.</p>
+                <p>Ραφήνα, Αττική | Τηλ: +30 229 40 XXXXX | Email: info@sfmrafinas.gr</p>
+            </div>
+        </footer>
+    `;
+    
+    document.getElementById('footer-container').innerHTML = footerHTML;
+});
+</script>
