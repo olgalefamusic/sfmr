@@ -1,7 +1,7 @@
 // Music Association Website JavaScript
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize all functionality
+    // Initialize all functionality 
     initNavigation();
     initMobileNav();
     initEventFilters();
