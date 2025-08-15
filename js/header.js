@@ -1,6 +1,6 @@
 /**
  * Header Component for Σύλλογος Φίλων Μουσικής Ραφήνας
- * This file creates and injects the header navigation into the page
+ * This file creates and injects the header navigation into the page 
  */
 
 document.addEventListener('DOMContentLoaded', function() {
