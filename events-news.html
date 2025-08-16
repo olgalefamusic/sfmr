@@ -1,31 +1,298 @@
 <!DOCTYPE html>
-<html lang="el">
+<html lang="el"> 
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Το Πρόγραμμά μας & Νέα</title>
-<link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Εκδηλώσεις & Νέα - Σύλλογος Φίλων Μουσικής Ραφήνας</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header>
-<h1>Το Πρόγραμμά μας & Νέα</h1>
-<nav>
-<ul>
-<li><a href="index.html">Αρχική</a></li>
-<li><a href="about.html">Σχετικά με τον Σύλλογο</a></li>
-<li><a href="program-news.html">Το Πρόγραμμά μας & Νέα</a></li>
-<li><a href="contact.html">Επικοινωνία</a></li>
-<li><a href="register.html">Εγγραφή Μελών</a></li>
-</ul>
-</nav>
-</header>
-<main>
-<h2>Οι δραστηριότητες και οι ανακοινώσεις μας</h2>
-<!-- Μπορείτε να βάλετε εδώ τις δραστηριότητες και ειδήσεις -->
-<p>Εδώ θα αναρτάτε τις εκδηλώσεις και τις ανακοινώσεις του συλλόγου...</p>
-</main>
-<footer>
-<p>&copy; 2025 Σύλλογος Φίλων της Μουσικής Ραφήνας</p>
-</footer>
+    <div id="header-container"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Εκδηλώσεις & Νέα</h1>
+            <p class="hero-subtitle">Μείνετε ενημερωμένοι για τις δραστηριότητες και τα νέα του συλλόγου μας</p>
+        </div>
+    </section>
+
+    <!-- Upcoming Events Section -->
+    <section class="upcoming-events">
+        <div class="container">
+            <h2>Επερχόμενες Εκδηλώσεις</h2>
+            <div class="events-featured">
+                <div class="featured-event">
+                    <div class="event-image">
+                        <img src="images/events/autumn-concert.jpg" alt="Φθινοπωρινή Συναυλία">
+                        <div class="event-badge featured">Προτεινόμενο</div>
+                    </div>
+                    <div class="event-details">
+                        <div class="event-date-large">
+                            <span class="day">15</span>
+                            <span class="month-year">Σεπτεμβρίου 2025</span>
+                        </div>
+                        <h3>Φθινοπωρινή Συναυλία - "Μελωδίες της Παράδοσης"</h3>
+                        <p class="event-description">Μια βραδιά αφιερωμένη στην ελληνική παραδοσιακή μουσική με τη συμμετοχή του τοπικού μας οργάνου και καλεσμένων καλλιτεχνών από όλη την Ελλάδα. Θα παρουσιαστούν αγαπημένα τραγούδια από όλες τις περιοχές της χώρας μας.</p>
+                        <div class="event-meta">
+                            <span class="event-time">⏰ 20:00</span>
+                            <span class="event-location">📍 Ωδείο MCGeorge</span>
+                            <span class="event-price">🎫 Είσοδος: 10€</span>
+                        </div>
+                        <div class="event-tags">
+                            <span class="tag">Παραδοσιακή Μουσική</span>
+                            <span class="tag">Συναυλία</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="events-calendar">
+                <h3>Πρόγραμμα Εκδηλώσεων</h3>
+                <div class="calendar-grid">
+                    <div class="calendar-event">
+                        <div class="event-date-small">
+                            <span class="day">22</span>
+                            <span class="month">Σεπ</span>
+                        </div>
+                        <div class="event-info">
+                            <h4>Μουσικό Εργαστήρι - Λαϊκή Μουσική</h4>
+                            <p>Εισαγωγή στη λαϊκή μουσική για αρχάριους</p>
+                            <span class="event-time">⏰ 18:00 | 📍 Ωδείο MCGeorge</span>
+                        </div>
+                        <div class="event-status available">Διαθέσιμες Θέσεις</div>
+                    </div>
+
+                    <div class="calendar-event">
+                        <div class="event-date-small">
+                            <span class="day">30</span>
+                            <span class="month">Σεπ</span>
+                        </div>
+                        <div class="event-info">
+                            <h4>Γενική Συνέλευση Συλλόγου</h4>
+                            <p>Ετήσια συνάντηση των μελών - παρουσίαση δραστηριοτήτων</p>
+                            <span class="event-time">⏰ 19:00 | 📍 Ωδείο MCGeorge</span>
+                        </div>
+                        <div class="event-status members">Μόνο Μέλη</div>
+                    </div>
+
+                    <div class="calendar-event">
+                        <div class="event-date-small">
+                            <span class="day">05</span>
+                            <span class="month">Οκτ</span>
+                        </div>
+                        <div class="event-info">
+                            <h4>Παιδική Συναυλία - "Μουσικές Περιπέτειες"</h4>
+                            <p>Ειδική παράσταση για παιδιά και οικογένειες</p>
+                            <span class="event-time">⏰ 17:00 | 📍 Πολιτιστικό Κέντρο</span>
+                        </div>
+                        <div class="event-status featured">Οικογενειακό</div>
+                    </div>
+
+                    <div class="calendar-event">
+                        <div class="event-date-small">
+                            <span class="day">12</span>
+                            <span class="month">Οκτ</span>
+                        </div>
+                        <div class="event-info">
+                            <h4>Σεμινάριο Βυζαντινής Μουσικής</h4>
+                            <p>Εισαγωγή στη βυζαντινή μουσική με έμπειρο διδάσκαλο</p>
+                            <span class="event-time">⏰ 19:00 | 📍 Ωδείο MCGeorge</span>
+                        </div>
+                        <div class="event-status limited">Περιορισμένες Θέσεις</div>
+                    </div>
+
+                    <div class="calendar-event">
+                        <div class="event-date-small">
+                            <span class="day">20</span>
+                            <span class="month">Οκτ</span>
+                        </div>
+                        <div class="event-info">
+                            <h4>Συναυλία Νέων Ταλέντων</h4>
+                            <p>Παρουσίαση των μαθητών του συλλόγου</p>
+                            <span class="event-time">⏰ 20:00 | 📍 Ωδείο MCGeorge</span>
+                        </div>
+                        <div class="event-status available">Ελεύθερη Είσοδος</div>
+                    </div>
+
+                    <div class="calendar-event">
+                        <div class="event-date-small">
+                            <span class="day">28</span>
+                            <span class="month">Οκτ</span>
+                        </div>
+                        <div class="event-info">
+                            <h4>Χορωδιακή Βραδιά</h4>
+                            <p>Συναυλία με τη χορωδία του συλλόγου</p>
+                            <span class="event-time">⏰ 19:30 | 📍 Εκκλησία Αγίας Παρασκευής</span>
+                        </div>
+                        <div class="event-status available">Διαθέσιμες Θέσεις</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="news-section">
+        <div class="container">
+            <h2>Τελευταία Νέα</h2>
+            
+            <!-- Featured News -->
+            <div class="news-featured">
+                <article class="featured-news">
+                    <div class="news-image">
+                        <img src="images/news/new-departments.jpg" alt="Νέα Τμήματα Μουσικής">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-category">Εκπαίδευση</div>
+                        <h3>Νέα Τμήματα Μουσικής - Εγγραφές Ανοιχτές</h3>
+                        <p class="news-date">10 Αυγούστου 2025</p>
+                        <p class="news-excerpt">Ο σύλλογός μας ανοίγει νέα τμήματα για παιδιά και ενήλικες με στόχο την προσφορά ποιοτικής μουσικής εκπαίδευσης. Οι εγγραφές ξεκινούν τον Σεπτέμβριο και περιλαμβάνουν μαθήματα πιάνου, κιθάρας, βιολιού και φωνητικής για όλα τα επίπεδα.</p>
+                        <div class="news-tags">
+                            <span class="tag">Εκπαίδευση</span>
+                            <span class="tag">Νέα Τμήματα</span>
+                            <span class="tag">Εγγραφές</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- News Grid -->
+            <div class="news-grid-page">
+                <article class="news-card">
+                    <div class="news-card-image">
+                        <img src="images/news/summer-concert.jpg" alt="Καλοκαιρινή Συναυλία">
+                    </div>
+                    <div class="news-card-content">
+                        <div class="news-category">Εκδηλώσεις</div>
+                        <h3>Επιτυχημένη Καλοκαιρινή Συναυλία</h3>
+                        <p class="news-date">5 Αυγούστου 2025</p>
+                        <p>Με μεγάλη επιτυχία και συμμετοχή πραγματοποιήθηκε η καλοκαιρινή μας συναυλία στην παραλία της Ραφήνας. Περισσότεροι από 300 θεατές απόλαυσαν μια βραδιά γεμάτη μουσική.</p>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-card-image">
+                        <img src="images/news/new-members.jpg" alt="Νέα Μέλη">
+                    </div>
+                    <div class="news-card-content">
+                        <div class="news-category">Σύλλογος</div>
+                        <h3>Νέα Μέλη Καλοδεχούμενα</h3>
+                        <p class="news-date">1 Αυγούστου 2025</p>
+                        <p>Καλούμε όλους τους φίλους της μουσικής να γίνουν μέλη του συλλόγου μας. Ειδικές προσφορές για νέα μέλη μέχρι τέλος Σεπτεμβρίου!</p>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-card-image">
+                        <img src="images/news/awards.jpg" alt="Βραβεία">
+                    </div>
+                    <div class="news-card-content">
+                        <div class="news-category">Επιτυχίες</div>
+                        <h3>Βράβευση Μαθητών στο Διαγωνισμό</h3>
+                        <p class="news-date">25 Ιουλίου 2025</p>
+                        <p>Μαθητές του συλλόγου μας διακρίθηκαν στον πανελλήνιο διαγωνισμό νέων ταλέντων, κατακτώντας το 2ο και 3ο βραβείο στην κατηγορία εφήβων.</p>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-card-image">
+                        <img src="images/news/partnership.jpg" alt="Συνεργασία">
+                    </div>
+                    <div class="news-card-content">
+                        <div class="news-category">Συνεργασίες</div>
+                        <h3>Νέα Συνεργασία με το Δήμο</h3>
+                        <p class="news-date">20 Ιουλίου 2025</p>
+                        <p>Υπογράφηκε μνημόνιο συνεργασίας με τον Δήμο Ραφήνας-Πικερμίου για τη διοργάνωση περισσότερων πολιτιστικών εκδηλώσεων.</p>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-card-image">
+                        <img src="images/news/instruments.jpg" alt="Νέα Όργανα">
+                    </div>
+                    <div class="news-card-content">
+                        <div class="news-category">Εξοπλισμός</div>
+                        <h3>Νέα Μουσικά Όργανα</h3>
+                        <p class="news-date">15 Ιουλίου 2025</p>
+                        <p>Ο σύλλογος απέκτησε νέα μουσικά όργανα χάρη στη χορηγία τοπικών επιχειρήσεων. Τα όργανα θα χρησιμοποιηθούν στα μαθήματα.</p>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-card-image">
+                        <img src="images/news/masterclass.jpg" alt="Masterclass">
+                    </div>
+                    <div class="news-card-content">
+                        <div class="news-category">Εκπαίδευση</div>
+                        <h3>Masterclass με Διεθνή Καλλιτέχνη</h3>
+                        <p class="news-date">10 Ιουλίου 2025</p>
+                        <p>Στις 15 Σεπτεμβρίου θα πραγματοποιηθεί ειδικό masterclass πιάνου με τον διεθνούς φήμης πιανίστα Αλέξανδρο Κουτσονάντη.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Categories Section -->
+    <section class="event-categories">
+        <div class="container">
+            <h2>Κατηγορίες Εκδηλώσεων</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">🎼</div>
+                    <h3>Συναυλίες</h3>
+                    <p>Κλασικές, λαϊκές και παραδοσιακές συναυλίες με τοπικούς και επισκέπτες καλλιτέχνες</p>
+                    <div class="category-count">12 εκδηλώσεις φέτος</div>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon">🎓</div>
+                    <h3>Εκπαιδευτικά Προγράμματα</h3>
+                    <p>Σεμινάρια, εργαστήρια και masterclasses για όλες τις ηλικίες</p>
+                    <div class="category-count">25 προγράμματα φέτος</div>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon">👨‍👩‍👧‍👦</div>
+                    <h3>Οικογενειακές Εκδηλώσεις</h3>
+                    <p>Παιδικές συναυλίες και δραστηριότητες για όλη την οικογένεια</p>
+                    <div class="category-count">8 εκδηλώσεις φέτος</div>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon">🎭</div>
+                    <h3>Πολιτιστικές Εκδηλώσεις</h3>
+                    <p>Θεματικές βραδιές, εκθέσεις και πολιτιστικές παρουσιάσεις</p>
+                    <div class="category-count">15 εκδηλώσεις φέτος</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2>Μείνετε Ενημερωμένοι</h2>
+                    <p>Εγγραφείτε στο newsletter μας για να λαμβάνετε πρώτοι τα νέα μας και πληροφορίες για τις επερχόμενες εκδηλώσεις.</p>
+                </div>
+                <div class="newsletter-form">
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <input type="email" placeholder="Το email σας" required>
+                            <button type="submit" class="btn btn-primary">Εγγραφή</button>
+                        </div>
+                        <p class="newsletter-privacy">Σεβόμαστε την ιδιωτικότητά σας. Μπορείτε να καταργήσετε την εγγραφή ανά πάσα στιγμή.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-container"></div>
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
 </body>
 </html>
