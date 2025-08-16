@@ -1,7 +1,7 @@
-/* ─────────────────────────────────────────────
+/* ---------------------------------------------
    ΣΥΛΛΟΓΟΣ ΦΙΛΩΝ ΜΟΥΣΙΚΗΣ ΡΑΦΗΝΑΣ – style.css
    Updated with modern design system
-   ─────────────────────────────────────────────  */
+  ---------------------------------------------  */
 
 :root {
   /* Brand palette */
@@ -37,7 +37,9 @@
   --font-display: "Manrope", var(--font-body);
 }
 
-/* ─── Global reset ─────────────────────────── */
+/* ---------------------------------------------
+            Global reset 
+---------------------------------------------*/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -62,7 +64,10 @@ html, body {
   min-height: 100%;
 }
 
-/* ─── Body / Typography ────────────────────── */
+/* ---------------------------------------------
+            Body / Typography 
+---------------------------------------------*/
+
 body {
   font-family: var(--font-body);
   background: linear-gradient(180deg, var(--surface-1), var(--surface-2) 60%, var(--surface-3));
@@ -88,7 +93,9 @@ p {
   color: var(--text-2);
 }
 
-/* ─── Containers & grids ───────────────────── */
+/* ---------------------------------------------
+        Containers & grids 
+---------------------------------------------*/
 .container {
   width: 100%;
   max-width: var(--container);
@@ -109,7 +116,9 @@ p {
   gap: 20px;
 }
 
-/* ─── Header / Navigation ──────────────────── */
+/* ---------------------------------------------
+    Header / Navigation 
+--------------------------------------------- */
 
 /* Fix for white flash: Apply header background to the container */
 #header-container {
@@ -235,7 +244,9 @@ nav a.active:hover {
   box-shadow: 0 6px 25px rgba(74, 108, 176, 0.5);
 }
 
-/* ─── Hero Section ────────────────────────── */
+/* ---------------------------------------------
+        Hero Section 
+---------------------------------------------*/
 
 .hero {
   padding: 70px 0 40px;
@@ -280,7 +291,9 @@ nav a.active:hover {
   max-width: 60ch;
 }
 
-/* ─── Buttons ─────────────────────────────── */
+/* ---------------------------------------------
+                Buttons 
+--------------------------------------------- */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -309,7 +322,9 @@ nav a.active:hover {
   box-shadow: 0 6px 20px rgba(53, 74, 122, 0.4);
 }
 
-/* ─── Generic Sections ────────────────────── */
+/* ---------------------------------------------
+        Generic Sections 
+--------------------------------------------- */
 section {
   padding: 56px 0;
 }
@@ -342,7 +357,10 @@ section h2::after {
   border-radius: 2px;
 }
 
-/* ─── About Section ───────────────────────── */
+/* ---------------------------------------------
+            About Section 
+--------------------------------------------- */
+
 .about {
   background: var(--white);
 }
@@ -386,7 +404,9 @@ section h2::after {
   font-size: 1.2rem;
 }
 
-/* ─── Events Section ──────────────────────── */
+/* ---------------------------------------------
+    Events Section 
+--------------------------------------------- */
 .events {
   background: var(--surface-1);
 }
@@ -453,7 +473,9 @@ section h2::after {
   font-style: italic;
 }
 
-/* ─── News Section ────────────────────────── */
+/* ---------------------------------------------
+            News Section
+--------------------------------------------- */
 .news {
   background: var(--white);
 }
@@ -495,7 +517,10 @@ section h2::after {
   color: var(--text-2);
 }
 
-/* ─── Contact Section ─────────────────────── */
+/* ---------------------------------------------
+         Contact Section 
+--------------------------------------------- */
+
 .contact {
   background: var(--surface-1);
 }
@@ -582,7 +607,10 @@ section h2::after {
   align-self: flex-start;
 }
 
-/* ─── Footer ──────────────────────────────── */
+/* ---------------------------------------------
+         Footer
+---------------------------------------------*/
+
 footer {
   background: var(--surface-2);
   border-top: 1px solid rgba(0, 0, 0, 0.05);
@@ -602,7 +630,9 @@ footer p:last-child {
   font-size: 0.9rem;
 }
 
-/* ─── Scrollbar Styling ───────────────────── */
+/* ---------------------------------------------
+    Scrollbar Styling 
+--------------------------------------------- */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -620,12 +650,17 @@ footer p:last-child {
   background: var(--brand-500);
 }
 
-/* ─── Smooth Scrolling ────────────────────── */
+/* ---------------------------------------------
+        Smooth Scrolling 
+--------------------------------------------- */
 html {
   scroll-behavior: smooth;
 }
 
-/* ─── Animation Classes ───────────────────── */
+/* ---------------------------------------------
+        Animation Classes 
+---------------------------------------------*/
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -641,7 +676,10 @@ html {
   animation: fadeInUp 0.6s ease-out;
 }
 
-/* ─── Responsive Design ───────────────────── */
+/* ---------------------------------------------
+        Responsive Design 
+--------------------------------------------- */
+
 @media (max-width: 980px) {
   .hero-content,
   .grid.two,
@@ -783,7 +821,9 @@ html {
   }
 }
 
-/* ─── Print Styles ────────────────────────── */
+/* ---------------------------------------------
+        Print Styles 
+---------------------------------------------*/
 @media print {
   header,
   footer,
@@ -801,7 +841,9 @@ html {
   }
 }
 
-/* ─── Additional styles for About page ─────── */
+/* ---------------------------------------------
+Additional styles for About page
+---------------------------------------------──── */
 
 /* Mission Section */
 .mission {
@@ -1052,7 +1094,10 @@ html {
   }
 }
 
-/* ─── Partnerships Section ─────────────────── */
+/* --------------------------------------------- 
+Partnerships Section 
+--------------------------------------------- */
+
 .partnerships {
   background: var(--surface-2);
 }
@@ -1264,7 +1309,9 @@ html {
   }
 }
 
-/* ─── Events & News Page Styles ─────────────── */
+/* ---------------------------------------------
+Events & News Page Styles 
+--------------------------------------------- */
 
 /* Featured Event */
 .upcoming-events {
