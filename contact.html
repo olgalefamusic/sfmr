@@ -1,38 +1,359 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Επικοινωνία</title>
-<link rel="stylesheet" href="/css/main_style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Επικοινωνία - Σύλλογος Φίλων Μουσικής Ραφήνας</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-<header>
-<h1>Επικοινωνία</h1>
-<nav>
-<ul>
-<li><a href="index.html">Αρχική</a></li>
-<li><a href="about.html">Σχετικά με τον Σύλλογο</a></li>
-<li><a href="program-news.html">Το Πρόγραμμά μας & Νέα</a></li>
-<li><a href="contact.html">Επικοινωνία</a></li>
-<li><a href="register.html">Εγγραφή Μελών</a></li>
-</ul>
-</nav>
-</header>
-<main>
-<h2>Επικοινωνήστε μαζί μας</h2>
-<form action="#" method="post">
-<label for="name">Ονοματεπώνυμο:</label><br>
-<input type="text" id="name" name="name" required><br><br>
-<label for="email">Email:</label><br>
-<input type="email" id="email" name="email" required><br><br>
-<label for="message">Μήνυμα:</label><br>
-<textarea id="message" name="message" rows="5" required></textarea><br><br>
-<button type="submit">Αποστολή</button>
-</form>
-</main>
-<footer>
-<p>&copy; 2025 Σύλλογος Φίλων της Μουσικής Ραφήνας</p>
-</footer>
+    <!-- Header -->
+    <header class="site-header" id="header">
+        <div class="container">
+            <div class="nav-wrap">
+                <a href="index.html" class="brand">
+                    <img src="logo.png" alt="Λογότυπο" class="brand-logo">
+                    <span class="brand-text">Σύλλογος Φίλων Μουσικής Ραφήνας</span>
+                </a>
+                <nav class="main-nav">
+                    <button class="nav-toggle" id="navToggle">☰</button>
+                    <ul class="nav-list" id="navList">
+                        <li><a href="index.html">Αρχική</a></li>
+                        <li><a href="#about">Σχετικά</a></li>
+                        <li><a href="#events">Εκδηλώσεις</a></li>
+                        <li><a href="#news">Νέα</a></li>
+                        <li><a href="contact.html" class="active">Επικοινωνία</a></li>
+                        <li><a href="#" class="btn btn-small btn-primary">Γίνε Μέλος</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contact Hero Section -->
+    <section class="hero contact-hero">
+        <div class="container">
+            <div class="hero-content single-column">
+                <div class="hero-text">
+                    <h1>Επικοινωνία</h1>
+                    <p class="hero-subtitle">Είμαστε εδώ για να σας βοηθήσουμε! Επικοινωνήστε μαζί μας για οποιαδήποτε ερώτηση ή πληροφορία σχετικά με τις δραστηριότητές μας.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section class="contact-info-section">
+        <div class="container">
+            <div class="contact-info-grid">
+                <!-- Contact Cards -->
+                <div class="contact-cards">
+                    <div class="contact-card">
+                        <div class="contact-icon">📍</div>
+                        <h3>Διεύθυνση</h3>
+                        <p>Λεωφόρος Μαραθώνος 45<br>
+                        Ραφήνα, 19009<br>
+                        Αττική, Ελλάδα</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">📞</div>
+                        <h3>Τηλέφωνο</h3>
+                        <p>Κεντρικό: <a href="tel:+302294022445">22940 22445</a><br>
+                        Κινητό: <a href="tel:+306944123456">694 412 3456</a></p>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">✉️</div>
+                        <h3>Email</h3>
+                        <p><a href="mailto:info@musicrafina.gr">info@musicrafina.gr</a><br>
+                        <a href="mailto:president@musicrafina.gr">president@musicrafina.gr</a></p>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">🕒</div>
+                        <h3>Ώρες Λειτουργίας</h3>
+                        <p>Δευτέρα - Παρασκευή: 17:00 - 21:00<br>
+                        Σάββατο: 10:00 - 14:00<br>
+                        Κυριακή: Κλειστά</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">🌐</div>
+                        <h3>Κοινωνικά Δίκτυα</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-link">Facebook</a>
+                            <a href="#" class="social-link">Instagram</a>
+                            <a href="#" class="social-link">YouTube</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <div class="contact-form">
+                        <h3>Στείλτε μας μήνυμα</h3>
+                        <p>Συμπληρώστε την παρακάτω φόρμα και θα επικοινωνήσουμε μαζί σας το συντομότερο δυνατό.</p>
+                        
+                        <form id="contactForm" action="#" method="POST">
+                            <div class="form-group">
+                                <label for="name">Όνομα *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="surname">Επώνυμο *</label>
+                                <input type="text" id="surname" name="surname" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Τηλέφωνο</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Θέμα *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Επιλέξτε θέμα...</option>
+                                    <option value="membership">Εγγραφή Μέλους</option>
+                                    <option value="events">Εκδηλώσεις</option>
+                                    <option value="lessons">Μαθήματα Μουσικής</option>
+                                    <option value="collaboration">Συνεργασία</option>
+                                    <option value="general">Γενικές Πληροφορίες</option>
+                                    <option value="other">Άλλο</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Μήνυμα *</label>
+                                <textarea id="message" name="message" rows="6" placeholder="Γράψτε το μήνυμά σας εδώ..." required></textarea>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="newsletter" id="newsletter">
+                                    <span class="checkmark"></span>
+                                    Θέλω να λαμβάνω ενημερώσεις για τις δραστηριότητες του συλλόγου
+                                </label>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="privacy" id="privacy" required>
+                                    <span class="checkmark"></span>
+                                    Συμφωνώ με την <a href="#" class="link-accent">πολιτική προστασίας δεδομένων</a> *
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-large">
+                                <span>Αποστολή Μηνύματος</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2>Πού θα μας βρείτε</h2>
+            <div class="map-container">
+                <div class="map-mock">
+                    <div class="map-box">
+                        <p>🗺️ Χάρτης Google Maps<br>
+                        <small>Λεωφόρος Μαραθώνος 45, Ραφήνα</small></p>
+                    </div>
+                </div>
+                <div class="location-info">
+                    <h3>Οδηγίες μετάβασης</h3>
+                    <div class="directions">
+                        <div class="direction-item">
+                            <strong>Με αυτοκίνητο:</strong>
+                            <p>Από την Αθήνα, πάρτε την Εθνική Οδό προς Ραφήνα. Μετά το διόδια, συνεχίστε ευθεία για περίπου 5 χλμ. Το κτίριό μας βρίσκεται στη Λεωφόρο Μαραθώνος, δίπλα στο Δημαρχείο.</p>
+                        </div>
+                        <div class="direction-item">
+                            <strong>Με λεωφορείο:</strong>
+                            <p>Λεωφορεία ΚΤΕΛ από Πεδίον Άρεως (γραμμή Αθήνα-Ραφήνα). Κατεβείτε στη στάση "Κεντρική Πλατεία Ραφήνας" και περπατήστε 2 λεπτά.</p>
+                        </div>
+                        <div class="direction-item">
+                            <strong>Parking:</strong>
+                            <p>Δωρεάν θέσες στάθμευσης διαθέσιμες στην οδό πίσω από το κτίριο και στην πλατεία του Δήμου.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Συχνές Ερωτήσεις</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>Πώς μπορώ να γίνω μέλος του συλλόγου;</h3>
+                    <p>Για να γίνετε μέλος, επισκεφτείτε τα γραφεία μας με την ταυτότητά σας και συμπληρώστε την αίτηση εγγραφής. Η ετήσια συνδρομή είναι 30€ για ενήλικες και 15€ για φοιτητές.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Παρέχετε μαθήματα μουσικής;</h3>
+                    <p>Ναι! Προσφέρουμε μαθήματα πιάνου, κιθάρας, βιολιού και θεωρίας μουσικής. Επικοινωνήστε μαζί μας για περισσότερες πληροφορίες σχετικά με τα προγράμματα και τις τιμές.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Πότε γίνονται οι εκδηλώσεις;</h3>
+                    <p>Οι εκδηλώσεις μας γίνονται κυρίως τα Σαββατοκύριακα. Ελέγχετε την ενότητα "Εκδηλώσεις" στην αρχική σελίδα για το πρόγραμμα ή εγγραφείτε στο newsletter μας.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Υπάρχει δυνατότητα ενοικίασης αίθουσας;</h3>
+                    <p>Ναι, ενοικιάζουμε την αίθουσά μας για μουσικές εκδηλώσεις, συναυλίες και εκπαιδευτικά προγράμματα. Επικοινωνήστε μαζί μας για διαθεσιμότητα και τιμές.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Μπορώ να συμμετάσχω σε συναυλίες;</h3>
+                    <p>Απολύτως! Καλωσορίζουμε μουσικούς όλων των επιπέδων στις εκδηλώσεις μας. Επικοινωνήστε μαζί μας για να συζητήσουμε τις δυνατότητες συμμετοχής σας.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Έχετε προγράμματα για παιδιά;</h3>
+                    <p>Ναι! Έχουμε ειδικά προγράμματα μουσικής αγωγής για παιδιά 6-12 ετών, καθώς και εργαστήρια δημιουργικότητας. Δείτε το πρόγραμμά μας ή επικοινωνήστε για περισσότερες λεπτομέρειες.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-wrap">
+                <div class="cta-content">
+                    <h3>Έχετε ερωτήσεις;</h3>
+                    <p>Μη διστάσετε να επικοινωνήσετε μαζί μας! Η ομάδα μας είναι εδώ για να σας βοηθήσει.</p>
+                </div>
+                <div class="cta-actions">
+                    <a href="tel:+302294022445" class="btn btn-primary">Καλέστε Τώρα</a>
+                    <a href="mailto:info@musicrafina.gr" class="btn btn-ghost">Στείλτε Email</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="foot-grid">
+                <div class="foot-brand">
+                    <div class="brand">
+                        <img src="logo.png" alt="Λογότυπο" class="footer-logo">
+                        Σύλλογος Φίλων Μουσικής Ραφήνας
+                    </div>
+                    <p>Προάγουμε την μουσική παιδεία και την πολιτιστική ανάπτυξη στη Ραφήνα από το 1985.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">YouTube</a>
+                    </div>
+                </div>
+
+                <div class="foot-links">
+                    <h4>Γρήγοροι Σύνδεσμοι</h4>
+                    <ul>
+                        <li><a href="index.html">Αρχική</a></li>
+                        <li><a href="#about">Σχετικά με εμάς</a></li>
+                        <li><a href="#events">Εκδηλώσεις</a></li>
+                        <li><a href="#news">Νέα & Ανακοινώσεις</a></li>
+                        <li><a href="contact.html">Επικοινωνία</a></li>
+                        <li><a href="#">Γίνε Μέλος</a></li>
+                    </ul>
+                </div>
+
+                <div class="foot-news">
+                    <h4>Newsletter</h4>
+                    <p>Λάβετε ενημερώσεις για τις εκδηλώσεις μας</p>
+                    <form class="newsletter" action="#" method="POST">
+                        <input type="email" placeholder="Email σας" required>
+                        <button type="submit" class="btn btn-primary">Εγγραφή</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-base">
+            <div class="container">
+                <div class="base-wrap">
+                    <span>© 2025 Σύλλογος Φίλων Μουσικής Ραφήνας</span>
+                    <span class="sep">|</span>
+                    <a href="#">Πολιτική Απορρήτου</a>
+                    <span class="sep">|</span>
+                    <a href="#">Όροι Χρήσης</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        document.getElementById('navToggle').addEventListener('click', function() {
+            document.getElementById('navList').classList.toggle('open');
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData.entries());
+            
+            // Simple validation
+            if (!data.name || !data.surname || !data.email || !data.subject || !data.message || !data.privacy) {
+                alert('Παρακαλώ συμπληρώστε όλα τα υποχρεωτικά πεδία και αποδεχτείτε την πολιτική προστασίας δεδομένων.');
+                return;
+            }
+
+            // Simulate form submission
+            const button = this.querySelector('button[type="submit"]');
+            const originalText = button.innerHTML;
+            
+            button.innerHTML = '<span>Αποστολή...</span>';
+            button.disabled = true;
+            
+            setTimeout(() => {
+                alert('Το μήνυμά σας στάλθηκε επιτυχώς! Θα επικοινωνήσουμε μαζί σας σύντομα.');
+                this.reset();
+                button.innerHTML = originalText;
+                button.disabled = false;
+            }, 2000);
+        });
+
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', function() {
+                this.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 </html>
