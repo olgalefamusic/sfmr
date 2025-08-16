@@ -17,38 +17,32 @@
           --font-body: "Noto Sans Greek", system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", sans-serif;
           --font-display: "Manrope", var(--font-body);
         }
-
         /* --- From Global reset --- */
         * {
           box-sizing: border-box;
           margin: 0;
           padding: 0;
         }
-
         img {
           max-width: 100%;
           display: block;
         }
-
         a {
           text-decoration: none;
           color: var(--brand-500);
         }
-
         /* --- From Body / Typography --- */
         body {
           font-family: var(--font-body);
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
         }
-
         h1, h2, h3, h4 {
           font-family: var(--font-display);
           line-height: 1.25;
           letter-spacing: -0.01em;
           margin: 0 0 10px 0;
         }
-
         /* --- From Containers & grids --- */
         .container {
           width: 100%;
@@ -56,7 +50,6 @@
           margin: 0 auto;
           padding: 0 20px;
         }
-
         /* --- From Header / Navigation --- */
         header {
           position: sticky;
@@ -65,7 +58,6 @@
           background: linear-gradient(135deg, var(--header-primary), var(--header-secondary));
           border-bottom: 1px solid rgba(74, 108, 176, 0.3);
         }
-
         .header-content {
           display: flex;
           align-items: center;
@@ -73,13 +65,11 @@
           height: 80px;
           padding: 0 10px;
         }
-
         .header-brand {
           display: flex;
           align-items: center;
           gap: 16px;
         }
-
         .header-logo {
           height: 50px;
           width: auto;
@@ -88,7 +78,6 @@
           filter: brightness(1.1) contrast(1.1);
           flex-shrink: 0;
         }
-
         .header-title h1 {
           font-size: 22px;
           font-weight: 700;
@@ -97,7 +86,6 @@
           line-height: 1.2;
           letter-spacing: -0.5px;
         }
-
         .header-subtitle {
           font-size: 13px;
           color: var(--brand-300);
@@ -106,20 +94,17 @@
           margin-top: 2px;
           display: block;
         }
-
         .brand-title-link {
           display: block;
           text-decoration: none;
           color: inherit;
         }
-
         nav ul {
           display: flex;
           align-items: center;
           gap: 8px;
           list-style: none;
         }
-
         nav a {
           padding: 12px 18px;
           border-radius: 12px;
@@ -129,13 +114,11 @@
           letter-spacing: 0.02em;
           text-transform: uppercase;
         }
-
         nav a.active {
             background: linear-gradient(135deg, var(--brand-500), var(--brand-700));
             color: var(--white);
             font-weight: 700;
         }
-
         /* --- Relevant Responsive Design for Header --- */
         @media (max-width: 780px) {
           nav ul {
@@ -144,60 +127,51 @@
             gap: 0.5rem;
             justify-content: center;
           }
-
           nav a {
             padding: 10px 14px;
             font-size: 13px;
           }
-
           .header-content {
             flex-direction: column;
             gap: 1rem;
             height: auto;
             padding: 15px 10px;
           }
-
           .header-brand {
             flex-direction: column;
             text-align: center;
             gap: 10px;
           }
-
           .header-title h1 {
             font-size: 18px;
           }
-
           .header-subtitle {
             font-size: 12px;
           }
         }
-
         @media (max-width: 480px) {
           .header-brand {
             gap: 8px;
           }
-
           .header-title h1 {
             font-size: 16px;
             text-align: center;
           }
-
           .header-subtitle {
             font-size: 11px;
             text-align: center;
           }
-
           nav ul {
             gap: 0.3rem;
           }
-
           nav a {
             padding: 8px 12px;
             font-size: 12px;
           }
         }
     </style>
-    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -205,7 +179,7 @@
 </head>
 <body>
     <div id="header-container"></div>
-
+    
     <!-- Contact Hero Section -->
     <section class="hero contact-hero">
         <div class="container">
@@ -226,45 +200,51 @@
                 <div class="contact-cards">
                     <div class="contact-card">
                         <div class="contact-icon">📍</div>
-                        <h3>Διεύθυνση</h3>
-                        <p>Λεωφόρος Μαραθώνος 45<br>
-                        Ραφήνα, 19009<br>
-                        Αττική, Ελλάδα</p>
+                        <div class="contact-details">
+                            <h3>Διεύθυνση</h3>
+                            <p>Λεωφόρος Μαραθώνος 45<br>
+                            Ραφήνα, 19009<br>
+                            Αττική, Ελλάδα</p>
+                        </div>
                     </div>
-
                     <div class="contact-card">
                         <div class="contact-icon">📞</div>
-                        <h3>Τηλέφωνο</h3>
-                        <p>Κεντρικό: <a href="tel:+302294022445">22940 22445</a><br>
-                        Κινητό: <a href="tel:+306944123456">694 412 3456</a></p>
+                        <div class="contact-details">
+                            <h3>Τηλέφωνο</h3>
+                            <p>Κεντρικό: <a href="tel:+302294022445">22940 22445</a><br>
+                            Κινητό: <a href="tel:+306944123456">694 412 3456</a></p>
+                        </div>
                     </div>
-
                     <div class="contact-card">
                         <div class="contact-icon">✉️</div>
-                        <h3>Email</h3>
-                        <p><a href="mailto:info@musicrafina.gr">info@musicrafina.gr</a><br>
-                        <a href="mailto:president@musicrafina.gr">president@musicrafina.gr</a></p>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p><a href="mailto:info@musicrafina.gr">info@musicrafina.gr</a><br>
+                            <a href="mailto:president@musicrafina.gr">president@musicrafina.gr</a></p>
+                        </div>
                     </div>
-
                     <div class="contact-card">
                         <div class="contact-icon">🕒</div>
-                        <h3>Ώρες Λειτουργίας</h3>
-                        <p>Δευτέρα - Παρασκευή: 17:00 - 21:00<br>
-                        Σάββατο: 10:00 - 14:00<br>
-                        Κυριακή: Κλειστά</p>
+                        <div class="contact-details">
+                            <h3>Ώρες Λειτουργίας</h3>
+                            <p>Δευτέρα - Παρασκευή: 17:00 - 21:00<br>
+                            Σάββατο: 10:00 - 14:00<br>
+                            Κυριακή: Κλειστά</p>
+                        </div>
                     </div>
-
                     <div class="contact-card">
                         <div class="contact-icon">🌐</div>
-                        <h3>Κοινωνικά Δίκτυα</h3>
-                        <div class="social-links">
-                            <a href="#" class="social-link">Facebook</a>
-                            <a href="#" class="social-link">Instagram</a>
-                            <a href="#" class="social-link">YouTube</a>
+                        <div class="contact-details">
+                            <h3>Κοινωνικά Δίκτυα</h3>
+                            <div class="social-links">
+                                <a href="#" class="social-link">Facebook</a>
+                                <a href="#" class="social-link">Instagram</a>
+                                <a href="#" class="social-link">YouTube</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-
+                
                 <!-- Contact Form -->
                 <div class="contact-form-container">
                     <div class="contact-form">
@@ -276,22 +256,18 @@
                                 <label for="name">Όνομα *</label>
                                 <input type="text" id="name" name="name" required>
                             </div>
-
                             <div class="form-group">
                                 <label for="surname">Επώνυμο *</label>
                                 <input type="text" id="surname" name="surname" required>
                             </div>
-
                             <div class="form-group">
                                 <label for="email">Email *</label>
                                 <input type="email" id="email" name="email" required>
                             </div>
-
                             <div class="form-group">
                                 <label for="phone">Τηλέφωνο</label>
                                 <input type="tel" id="phone" name="phone">
                             </div>
-
                             <div class="form-group">
                                 <label for="subject">Θέμα *</label>
                                 <select id="subject" name="subject" required>
@@ -304,29 +280,23 @@
                                     <option value="other">Άλλο</option>
                                 </select>
                             </div>
-
                             <div class="form-group">
                                 <label for="message">Μήνυμα *</label>
                                 <textarea id="message" name="message" rows="6" placeholder="Γράψτε το μήνυμά σας εδώ..." required></textarea>
                             </div>
-
                             <div class="form-group checkbox-group">
                                 <label class="checkbox-label">
                                     <input type="checkbox" name="newsletter" id="newsletter">
-                                    <span class="checkmark"></span>
                                     Θέλω να λαμβάνω ενημερώσεις για τις δραστηριότητες του συλλόγου
                                 </label>
                             </div>
-
                             <div class="form-group checkbox-group">
                                 <label class="checkbox-label">
                                     <input type="checkbox" name="privacy" id="privacy" required>
-                                    <span class="checkmark"></span>
                                     Συμφωνώ με την <a href="#" class="link-accent">πολιτική προστασίας δεδομένων</a> *
                                 </label>
                             </div>
-
-                            <button type="submit" class="btn btn-primary btn-large">
+                            <button type="submit" class="btn btn-primary">
                                 <span>Αποστολή Μηνύματος</span>
                             </button>
                         </form>
@@ -377,27 +347,22 @@
                     <h3>Πώς μπορώ να γίνω μέλος του συλλόγου;</h3>
                     <p>Για να γίνετε μέλος, επισκεφτείτε τα γραφεία μας με την ταυτότητά σας και συμπληρώστε την αίτηση εγγραφής. Η ετήσια συνδρομή είναι 30€ για ενήλικες και 15€ για φοιτητές.</p>
                 </div>
-
                 <div class="faq-item">
                     <h3>Παρέχετε μαθήματα μουσικής;</h3>
                     <p>Ναι! Προσφέρουμε μαθήματα πιάνου, κιθάρας, βιολιού και θεωρίας μουσικής. Επικοινωνήστε μαζί μας για περισσότερες πληροφορίες σχετικά με τα προγράμματα και τις τιμές.</p>
                 </div>
-
                 <div class="faq-item">
                     <h3>Πότε γίνονται οι εκδηλώσεις;</h3>
                     <p>Οι εκδηλώσεις μας γίνονται κυρίως τα Σαββατοκύριακα. Ελέγχετε την ενότητα "Εκδηλώσεις" στην αρχική σελίδα για το πρόγραμμα ή εγγραφείτε στο newsletter μας.</p>
                 </div>
-
                 <div class="faq-item">
                     <h3>Υπάρχει δυνατότητα ενοικίασης αίθουσας;</h3>
                     <p>Ναι, ενοικιάζουμε την αίθουσά μας για μουσικές εκδηλώσεις, συναυλίες και εκπαιδευτικά προγράμματα. Επικοινωνήστε μαζί μας για διαθεσιμότητα και τιμές.</p>
                 </div>
-
                 <div class="faq-item">
                     <h3>Μπορώ να συμμετάσχω σε συναυλίες;</h3>
                     <p>Απολύτως! Καλωσορίζουμε μουσικούς όλων των επιπέδων στις εκδηλώσεις μας. Επικοινωνήστε μαζί μας για να συζητήσουμε τις δυνατότητες συμμετοχής σας.</p>
                 </div>
-
                 <div class="faq-item">
                     <h3>Έχετε προγράμματα για παιδιά;</h3>
                     <p>Ναι! Έχουμε ειδικά προγράμματα μουσικής αγωγής για παιδιά 6-12 ετών, καθώς και εργαστήρια δημιουργικότητας. Δείτε το πρόγραμμά μας ή επικοινωνήστε για περισσότερες λεπτομέρειες.</p>
@@ -423,74 +388,11 @@
     </section>
 
     <!-- Footer -->
-    <footer class="site-footer">
-        <div class="container">
-            <div class="foot-grid">
-                <div class="foot-brand">
-                    <div class="brand">
-                        <img src="logo.png" alt="Λογότυπο" class="footer-logo">
-                        Σύλλογος Φίλων Μουσικής Ραφήνας
-                    </div>
-                    <p>Προάγουμε την μουσική παιδεία και την πολιτιστική ανάπτυξη στη Ραφήνα από το 1985.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link">Facebook</a>
-                        <a href="#" class="social-link">Instagram</a>
-                        <a href="#" class="social-link">YouTube</a>
-                    </div>
-                </div>
+    <div id="footer-container"></div>
 
-                <div class="foot-links">
-                    <h4>Γρήγοροι Σύνδεσμοι</h4>
-                    <ul>
-                        <li><a href="index.html">Αρχική</a></li>
-                        <li><a href="#about">Σχετικά με εμάς</a></li>
-                        <li><a href="#events">Εκδηλώσεις</a></li>
-                        <li><a href="#news">Νέα & Ανακοινώσεις</a></li>
-                        <li><a href="contact.html">Επικοινωνία</a></li>
-                        <li><a href="#">Γίνε Μέλος</a></li>
-                    </ul>
-                </div>
-
-                <div class="foot-news">
-                    <h4>Newsletter</h4>
-                    <p>Λάβετε ενημερώσεις για τις εκδηλώσεις μας</p>
-                    <form class="newsletter" action="#" method="POST">
-                        <input type="email" placeholder="Email σας" required>
-                        <button type="submit" class="btn btn-primary">Εγγραφή</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer-base">
-            <div class="container">
-                <div class="base-wrap">
-                    <span>© 2025 Σύλλογος Φίλων Μουσικής Ραφήνας</span>
-                    <span class="sep">|</span>
-                    <a href="#">Πολιτική Απορρήτου</a>
-                    <span class="sep">|</span>
-                    <a href="#">Όροι Χρήσης</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
     <script>
-        // Mobile Navigation Toggle
-        document.getElementById('navToggle').addEventListener('click', function() {
-            document.getElementById('navList').classList.toggle('open');
-        });
-
-        // Header scroll effect
-        window.addEventListener('scroll', function() {
-            const header = document.getElementById('header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-
         // Contact form submission
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
@@ -504,7 +406,7 @@
                 alert('Παρακαλώ συμπληρώστε όλα τα υποχρεωτικά πεδία και αποδεχτείτε την πολιτική προστασίας δεδομένων.');
                 return;
             }
-
+            
             // Simulate form submission
             const button = this.querySelector('button[type="submit"]');
             const originalText = button.innerHTML;
