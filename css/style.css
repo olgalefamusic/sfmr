@@ -8,12 +8,14 @@
   --brand-700: #354a7a;   /* σκούρο μπλε */
   --brand-500: #4a6cb0;   /* βασικό μπλε */
   --brand-300: #a5bffd;   /* ανοιχτό μπλε */
+  /* Header palette - softer transition */
+  --header-primary: #2c3e50;  /* σκούρο γκρι-μπλε */
+  --header-secondary: #34495e; /* ελαφρώς ανοιχτότερο */
   /* Accent / highlight */
   --accent-500: #f2a33b;  /* ζεστό πορτοκαλί */
   /* Neutrals */
   --white: #ffffff;
   --soft-black: #2a2f3e;  /* απαλό μαύρο */
-  --header-black: #1a1a1a; /* για το header */
   --text-1: #2d3748;      /* κύριο κείμενο */
   --text-2: #4a5568;      /* δευτερεύον */
   --text-3: #718096;      /* βοηθητικό */
@@ -112,15 +114,15 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--header-black);
-  border-bottom: 2px solid var(--accent-500);
+  background: linear-gradient(135deg, var(--header-primary), var(--header-secondary));
+  border-bottom: 1px solid rgba(74, 108, 176, 0.3);
   transition: all .22s ease;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 20px rgba(44, 62, 80, 0.15);
 }
 
 header.scrolled {
-  background: var(--header-black);
-  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(135deg, var(--header-primary), var(--header-secondary));
+  box-shadow: 0 4px 25px rgba(44, 62, 80, 0.25);
 }
 
 .header-content {
@@ -165,23 +167,23 @@ nav a {
 }
 
 nav a:hover {
-  background: rgba(255, 255, 255, 0.1);
-  color: var(--accent-500);
+  background: rgba(165, 191, 253, 0.15);
+  color: var(--brand-300);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(242, 163, 59, 0.3);
+  box-shadow: 0 6px 20px rgba(165, 191, 253, 0.2);
 }
 
 nav a.active {
-  background: linear-gradient(135deg, var(--accent-500), #e8941f);
+  background: linear-gradient(135deg, var(--brand-500), var(--brand-700));
   color: var(--white);
-  box-shadow: 0 4px 15px rgba(242, 163, 59, 0.4);
+  box-shadow: 0 4px 15px rgba(74, 108, 176, 0.4);
   font-weight: 700;
 }
 
 nav a.active:hover {
-  background: linear-gradient(135deg, #e8941f, var(--accent-500));
+  background: linear-gradient(135deg, var(--brand-300), var(--brand-500));
   transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(242, 163, 59, 0.5);
+  box-shadow: 0 6px 25px rgba(74, 108, 176, 0.5);
 }
 
 /* ─── Hero Section ────────────────────────── */
