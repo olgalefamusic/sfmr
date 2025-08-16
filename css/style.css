@@ -775,3 +775,40 @@ html {
     box-shadow: none !important;
   }
 }
+
+/* Brand link styling */
+.brand-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s ease;
+}
+
+.brand-link:hover {
+  opacity: 0.9;
+}
+
+.brand-link:hover .header-title h1 {
+  color: var(--brand-300);
+}
+
+/* Remove logo animation - update existing .header-logo rule */
+.header-logo {
+  height: 50px;
+  width: auto;
+  border-radius: 8px;
+  object-fit: contain;
+  filter: brightness(1.1) contrast(1.1);
+  flex-shrink: 0;
+  /* Removed: transition: transform 0.3s ease; */
+  /* Removed: hover transform scale */
+}
+
+/* Remove the hover animation from logo */
+/* Delete or comment out this rule:
+.header-logo:hover {
+  transform: scale(1.05);
+}
+*/
