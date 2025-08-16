@@ -1,10 +1,39 @@
 /**
  * Header Component for Σύλλογος Φίλων Μουσικής Ραφήνας
- * This file creates and injects the header navigation into the page 
+ * This file creates and injects the header navigation into the page
  */
 
 document.addEventListener('DOMContentLoaded', function() {
-    // ... (Your headerHTML and header injection code remains the same) ...
+    const headerHTML = `
+        <header>
+            <div class="container">
+                <div class="header-content">
+                    <div class="header-brand">
+                        <img src="images/sfmr-logo.jpg" alt="ΣΦΜΡ" class="header-logo">
+                        <div class="header-title">
+                            <a href="index.html" class="brand-title-link" data-section="home">
+                                <h1>Σύλλογος Φίλων Μουσικής Ραφήνας</h1>
+                            </a>
+                            <span class="header-subtitle">Ενώνουμε τους λάτρεις της μουσικής</span>
+                        </div>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="#home" data-section="home">Αρχική</a></li> <li><a href="about.html" data-section="about">Σχετικά με εμάς</a></li>
+                            <li><a href="events-news.html" data-section="events">Εκδηλώσεις & Νέα</a></li>
+                            <li><a href="contact.html" data-section="contact">Επικοινωνία</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+    `;
+
+    // Insert header into the page
+    const headerContainer = document.getElementById('header-container');
+    if (headerContainer) {
+        headerContainer.innerHTML = headerHTML;
+    }
 
     // Select all navigation links
     const navLinks = document.querySelectorAll('nav a, .brand-title-link');
@@ -15,8 +44,6 @@ document.addEventListener('DOMContentLoaded', function() {
             const sectionId = this.getAttribute('data-section');
 
             // Check if the link is an internal section link on the *current* page
-            // This condition ensures smooth scroll only for "home" on index.html
-            // and potentially other sections if they were on index.html
             if (href && href.startsWith('#')) {
                 e.preventDefault(); // Prevent default only for internal hash links
 
@@ -35,22 +62,13 @@ document.addEventListener('DOMContentLoaded', function() {
                         behavior: 'smooth'
                     });
                 }
-            } else if (sectionId && window.location.pathname.endsWith('index.html') || window.location.pathname === '/') {
-                // This block handles the case where you want 'data-section' links
-                // to smooth scroll *only if* you are on index.html.
-                // If you remove the 'if' condition here, these links will always
-                // smooth scroll even if they are meant for new pages.
+            } else if (sectionId && (window.location.pathname.endsWith('index.html') || window.location.pathname === '/')) {
+                // This block is slightly problematic if you *also* have sections on other pages
+                // that you want to scroll to using data-section.
+                // However, based on previous conversation, 'home' is the primary one for smooth scroll.
 
-                // For example, if you click "About" from index.html, it will smooth scroll
-                // instead of going to about.html. This is what's currently happening.
-                // To fix this, you need to be explicit.
-
-                // If the link is for a different page, let the browser handle it.
-                // Only prevent default and smooth scroll if it's the 'home' link
-                // AND we are on the index page.
-
-                if (sectionId === 'home') { // Only apply smooth scroll for 'home'
-                     e.preventDefault();
+                if (sectionId === 'home') { // Only apply smooth scroll for 'home' on the index page
+                   e.preventDefault();
                     let targetElement = document.querySelector('.hero');
                     if (targetElement) {
                         const headerHeight = document.querySelector('header').offsetHeight;
@@ -61,12 +79,10 @@ document.addEventListener('DOMContentLoaded', function() {
                         });
                     }
                 }
-                // For 'about', 'events', 'contact', the default behavior (navigating to the href) will happen
-                // because e.preventDefault() is NOT called for them here.
-
+                // For 'about', 'events', 'contact' (when on index.html), the default navigation will occur
+                // because e.preventDefault() is NOT called in this 'else if' block for them.
             }
             // Update active nav item (only for nav links, not brand link)
-            // This part might need adjustment if you want active states across different pages.
             if (this.closest('nav')) {
                 const navigationLinks = document.querySelectorAll('nav a[data-section]');
                 navigationLinks.forEach(navLink => navLink.classList.remove('active'));
@@ -76,7 +92,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Highlight active section on scroll (this is for *within* index.html)
-    // This functionality will only work on the index.html page.
     window.addEventListener('scroll', function() {
         const sections = [
             { element: document.querySelector('.hero'), id: 'home' },
@@ -104,12 +119,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Mobile menu toggle (if needed for future mobile improvements)
+    // Mobile menu toggle
     let mobileMenuOpen = false;
 
-    // Add mobile menu button for smaller screens
     function addMobileMenu() {
         const nav = document.querySelector('nav');
+        // Ensure nav exists before trying to prepend
+        if (!nav) {
+            console.warn("Navigation element (nav) not found. Mobile menu not added.");
+            return;
+        }
         const mobileMenuBtn = document.createElement('button');
         mobileMenuBtn.classList.add('mobile-menu-btn');
         mobileMenuBtn.innerHTML = '☰';
@@ -117,30 +136,41 @@ document.addEventListener('DOMContentLoaded', function() {
 
         mobileMenuBtn.addEventListener('click', function() {
             const navUl = nav.querySelector('ul');
-            mobileMenuOpen = !mobileMenuOpen;
+            if (navUl) { // Ensure ul exists before manipulating
+                mobileMenuOpen = !mobileMenuOpen;
 
-            if (mobileMenuOpen) {
-                navUl.classList.add('mobile-menu-open');
-                mobileMenuBtn.innerHTML = '✕';
-            } else {
-                navUl.classList.remove('mobile-menu-open');
-                mobileMenuBtn.innerHTML = '☰';
+                if (mobileMenuOpen) {
+                    navUl.classList.add('mobile-menu-open');
+                    mobileMenuBtn.innerHTML = '✕';
+                } else {
+                    navUl.classList.remove('mobile-menu-open');
+                    mobileMenuBtn.innerHTML = '☰';
+                }
             }
         });
 
         nav.prepend(mobileMenuBtn);
     }
 
-    // Check if mobile menu is needed
     function checkMobileMenu() {
         if (window.innerWidth <= 768) {
             if (!document.querySelector('.mobile-menu-btn')) {
                 addMobileMenu();
             }
+        } else { // If screen size goes above 768px and mobile menu button exists, remove it
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            if (mobileMenuBtn) {
+                mobileMenuBtn.remove();
+                // Also ensure the mobile-menu-open class is removed if the menu was open
+                const navUl = document.querySelector('nav ul');
+                if (navUl) {
+                    navUl.classList.remove('mobile-menu-open');
+                }
+                mobileMenuOpen = false; // Reset state
+            }
         }
     }
 
-    // Initial check and window resize listener
     checkMobileMenu();
     window.addEventListener('resize', checkMobileMenu);
 });
