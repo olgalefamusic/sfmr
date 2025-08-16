@@ -9,13 +9,13 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="container">
                 <div class="header-content">
                     <div class="header-brand">
-                        <a href="index.html" class="brand-link" data-section="home">
-                            <img src="images/sfmr-logo.jpg" alt="ΣΦΜΡ" class="header-logo">
-                            <div class="header-title">
+                        <img src="images/sfmr-logo.jpg" alt="ΣΦΜΡ" class="header-logo">
+                        <div class="header-title">
+                            <a href="index.html" class="brand-title-link" data-section="home">
                                 <h1>Σύλλογος Φίλων Μουσικής Ραφήνας</h1>
-                                <span class="header-subtitle">Ενώνουμε τους λάτρεις της μουσικής</span>
-                            </div>
-                        </a>
+                            </a>
+                            <span class="header-subtitle">Ενώνουμε τους λάτρεις της μουσικής</span>
+                        </div>
                     </div>
                     <nav>
                         <ul>
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Add smooth scrolling functionality for all navigation links
-    const navLinks = document.querySelectorAll('nav a[data-section], .brand-link[data-section]');
+    const navLinks = document.querySelectorAll('nav a[data-section], .brand-title-link[data-section]');
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
