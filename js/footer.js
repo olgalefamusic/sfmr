@@ -19,17 +19,17 @@ document.addEventListener('DOMContentLoaded', function() {
                         <div class="footer-section">
                             <h4>Γρήγορες Συνδέσεις</h4>
                             <ul>
-                                <li><a href="#about">Σχετικά με εμάς</a></li>
-                                <li><a href="#events">Εκδηλώσεις</a></li>
-                                <li><a href="#contact">Επικοινωνία</a></li>
-                                <li><a href="#membership">Εγγραφή Μελών</a></li>
+                                <li><a href="about.html">Σχετικά με εμάς</a></li>
+                                <li><a href="events-news.html">Εκδηλώσεις</a></li>
+                                <li><a href="contact.html">Επικοινωνία</a></li>
+                                <li><a href="register.html">Εγγραφή Μελών</a></li>
                             </ul>
                         </div>
                         
                         <div class="footer-section">
                             <h4>Επικοινωνία</h4>
                             <ul>
-                                <li>📍 Κεντρική Πλατεία Ραφήνας</li>
+                                <li>📍 Ωδείο McGeorge</li>
                                 <li>📞 +30 229 40 XXXXX</li>
                                 <li>✉️ info@sfmrafinas.gr</li>
                                 <li>🌐 www.sfmrafinas.gr</li>
@@ -74,150 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
         footerContainer.innerHTML = footerHTML;
     }
     
-    // Add footer-specific CSS styles
-    const footerStyles = `
-        <style>
-        /* Footer Specific Styles */
-        footer {
-            background: var(--text-dark);
-            color: var(--text-light);
-            padding: 3rem 0 1rem 0;
-            margin-top: 2rem;
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-        
-        .footer-info h3 {
-            color: var(--accent-color);
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-        
-        .footer-info p {
-            opacity: 0.9;
-            line-height: 1.6;
-        }
-        
-        .footer-links {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-        }
-        
-        .footer-section h4 {
-            color: var(--secondary-color);
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
-            border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 0.5rem;
-        }
-        
-        .footer-section ul {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .footer-section ul li {
-            margin-bottom: 0.5rem;
-            opacity: 0.9;
-        }
-        
-        .footer-section ul li a {
-            color: var(--text-light);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        
-        .footer-section ul li a:hover {
-            color: var(--accent-color);
-        }
-        
-        .social-links {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-        
-        .social-links a {
-            color: var(--text-light);
-            text-decoration: none;
-            transition: color 0.3s ease, transform 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .social-links a:hover {
-            color: var(--accent-color);
-            transform: translateX(5px);
-        }
-        
-        .social-icon {
-            font-size: 1.2rem;
-        }
-        
-        .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            padding-top: 1.5rem;
-        }
-        
-        .footer-bottom hr {
-            border: none;
-            height: 1px;
-            background: rgba(255, 255, 255, 0.2);
-            margin-bottom: 1.5rem;
-        }
-        
-        .footer-bottom-content {
-            text-align: center;
-        }
-        
-        .footer-bottom-content p {
-            margin-bottom: 0.5rem;
-            opacity: 0.8;
-        }
-        
-        .footer-credits {
-            font-size: 0.9rem;
-        }
-        
-        .footer-credits a {
-            color: var(--secondary-color);
-            text-decoration: none;
-        }
-        
-        .footer-credits a:hover {
-            color: var(--accent-color);
-        }
-        
-        /* Mobile Footer Styles */
-        @media (max-width: 768px) {
-            footer {
-                padding: 2rem 0 1rem 0;
-            }
-            
-            .footer-links {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-            
-            .social-links {
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            
-            .footer-bottom-content {
-                font-size: 0.9rem;
-            }
-        }
-        </style>
-    `;
+  
     
     // Add footer styles to the document head
     document.head.insertAdjacentHTML('beforeend', footerStyles);
