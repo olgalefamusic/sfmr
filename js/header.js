@@ -8,13 +8,19 @@ document.addEventListener('DOMContentLoaded', function() {
         <header>
             <div class="container">
                 <div class="header-content">
-                    <img src="images/sfmr-logo.jpg" alt="ΣΦΜΡ" class="header-logo">
+                    <div class="header-brand">
+                        <img src="images/sfmr-logo.jpg" alt="ΣΦΜΡ" class="header-logo">
+                        <div class="header-title">
+                            <h1>Σύλλογος Φίλων Μουσικής Ραφήνας</h1>
+                            <span class="header-subtitle">Ενώνουμε τους λάτρεις της μουσικής</span>
+                        </div>
+                    </div>
                     <nav>
                         <ul>
-                            <li><a href="#home" data-section="home">Αρχική</a></li>
-                            <li><a href="#about" data-section="about">Σχετικά</a></li>
-                            <li><a href="#events" data-section="events">Εκδηλώσεις & Νέα</a></li>
-                            <li><a href="#contact" data-section="contact">Επικοινωνία</a></li>
+                            <li><a href="index.html" data-section="home">Αρχική</a></li>
+                            <li><a href="about.html" data-section="about">Σχετικά</a></li>
+                            <li><a href="events-news.html" data-section="events">Εκδηλώσεις & Νέα</a></li>
+                            <li><a href="contact.html" data-section="contact">Επικοινωνία</a></li>
                         </ul>
                     </nav>
                 </div>
