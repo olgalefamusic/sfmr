@@ -19,7 +19,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                     <nav>
                         <ul>
-                            <li><a href="#home" data-section="home">Αρχική</a></li> <li><a href="about.html" data-section="about">Σχετικά με εμάς</a></li>
+                            <li><a href="home.html" data-section="home">Αρχική</a></li> 
+                            <li><a href="about.html" data-section="about">Σχετικά με εμάς</a></li>
                             <li><a href="events-news.html" data-section="events">Εκδηλώσεις & Νέα</a></li>
                             <li><a href="contact.html" data-section="contact">Επικοινωνία</a></li>
                         </ul>
