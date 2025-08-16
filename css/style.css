@@ -1,4 +1,13 @@
-/* ───────────────────────────────────────────── 
+nav ul {
+    gap: 0.3rem;
+  }
+  
+  nav a {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+/* ─────────────────────────────────────────────
    ΣΥΛΛΟΓΟΣ ΦΙΛΩΝ ΜΟΥΣΙΚΗΣ ΡΑΦΗΝΑΣ – style.css
    Updated with modern design system
    ───────────────────────────────────────────── */
@@ -129,21 +138,46 @@ header.scrolled {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 70px;
+  height: 80px;
   padding: 0 10px;
 }
 
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
 .header-logo {
-  height: 45px;
+  height: 50px;
   width: auto;
   border-radius: 8px;
   object-fit: contain;
   filter: brightness(1.1) contrast(1.1);
   transition: transform 0.3s ease;
+  flex-shrink: 0;
 }
 
 .header-logo:hover {
   transform: scale(1.05);
+}
+
+.header-title h1 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--white);
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.header-subtitle {
+  font-size: 13px;
+  color: var(--brand-300);
+  font-weight: 400;
+  font-style: italic;
+  margin-top: 2px;
+  display: block;
 }
 
 nav ul {
@@ -634,6 +668,20 @@ html {
     padding: 15px 10px;
   }
   
+  .header-brand {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  
+  .header-title h1 {
+    font-size: 18px;
+  }
+  
+  .header-subtitle {
+    font-size: 12px;
+  }
+  
   .events-grid,
   .news-grid {
     grid-template-columns: 1fr;
@@ -695,13 +743,18 @@ html {
     padding: 1.5rem;
   }
   
-  nav ul {
-    gap: 0.3rem;
+  .header-brand {
+    gap: 8px;
   }
   
-  nav a {
-    padding: 8px 12px;
-    font-size: 12px;
+  .header-title h1 {
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  .header-subtitle {
+    font-size: 11px;
+    text-align: center;
   }
 }
 
