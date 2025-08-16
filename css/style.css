@@ -228,8 +228,6 @@ nav a.active:hover {
 }
 
 .hero-content {
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
   gap: 34px;
   align-items: center;
   max-width: 1000px;
