@@ -13,6 +13,7 @@
   /* Neutrals */
   --white: #ffffff;
   --soft-black: #2a2f3e;  /* απαλό μαύρο */
+  --header-black: #1a1a1a; /* για το header */
   --text-1: #2d3748;      /* κύριο κείμενο */
   --text-2: #4a5568;      /* δευτερεύον */
   --text-3: #718096;      /* βοηθητικό */
@@ -111,56 +112,76 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
-  backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.85);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  background: var(--header-black);
+  border-bottom: 2px solid var(--accent-500);
   transition: all .22s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 header.scrolled {
-  background: rgba(247, 249, 252, 0.95);
-  box-shadow: 0 2px 12px rgba(53, 74, 122, 0.1);
+  background: var(--header-black);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
 }
 
 .header-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 66px;
+  height: 70px;
+  padding: 0 10px;
 }
 
 .header-logo {
-  height: 40px;
+  height: 45px;
   width: auto;
-  border-radius: 6px;
+  border-radius: 8px;
   object-fit: contain;
-  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.15));
+  filter: brightness(1.1) contrast(1.1);
+  transition: transform 0.3s ease;
+}
+
+.header-logo:hover {
+  transform: scale(1.05);
 }
 
 nav ul {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 8px;
   list-style: none;
 }
 
 nav a {
-  padding: 8px 10px;
-  border-radius: 10px;
-  font-weight: 500;
-  color: var(--brand-700);
-  transition: all .18s ease;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-weight: 600;
+  color: var(--white);
+  transition: all .3s ease;
+  position: relative;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-size: 14px;
 }
 
 nav a:hover {
-  background: var(--brand-300);
-  color: var(--white);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--accent-500);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(242, 163, 59, 0.3);
 }
 
 nav a.active {
-  background: var(--brand-500);
+  background: linear-gradient(135deg, var(--accent-500), #e8941f);
   color: var(--white);
-  box-shadow: 0 2px 8px rgba(74, 108, 176, 0.25);
+  box-shadow: 0 4px 15px rgba(242, 163, 59, 0.4);
+  font-weight: 700;
+}
+
+nav a.active:hover {
+  background: linear-gradient(135deg, #e8941f, var(--accent-500));
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(242, 163, 59, 0.5);
 }
 
 /* ─── Hero Section ────────────────────────── */
@@ -593,15 +614,22 @@ html {
   }
   
   nav ul {
-    flex-direction: column;
-    gap: 1rem;
-    text-align: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+  
+  nav a {
+    padding: 10px 14px;
+    font-size: 13px;
   }
   
   .header-content {
     flex-direction: column;
     gap: 1rem;
-    text-align: center;
+    height: auto;
+    padding: 15px 10px;
   }
   
   .events-grid,
@@ -663,6 +691,15 @@ html {
   
   .contact-form {
     padding: 1.5rem;
+  }
+  
+  nav ul {
+    gap: 0.3rem;
+  }
+  
+  nav a {
+    padding: 8px 12px;
+    font-size: 12px;
   }
 }
 
