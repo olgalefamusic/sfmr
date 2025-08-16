@@ -29,22 +29,22 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </header>
     `;
-    
+
     // Insert header into the page
     const headerContainer = document.getElementById('header-container');
     if (headerContainer) {
         headerContainer.innerHTML = headerHTML;
     }
-    
+
     // Add smooth scrolling functionality for all navigation links
     const navLinks = document.querySelectorAll('nav a[data-section], .brand-title-link[data-section]');
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
-            
+
             const sectionId = this.getAttribute('data-section');
             let targetElement;
-            
+
             // Map sections to actual elements
             switch(sectionId) {
                 case 'home':
@@ -62,16 +62,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 default:
                     targetElement = document.body;
             }
-            
+
             if (targetElement) {
                 const headerHeight = document.querySelector('header').offsetHeight;
                 const targetPosition = targetElement.offsetTop - headerHeight;
-                
+
                 window.scrollTo({
                     top: targetPosition,
                     behavior: 'smooth'
                 });
-                
+
                 // Update active nav item (only for nav links, not brand link)
                 if (this.closest('nav')) {
                     const navigationLinks = document.querySelectorAll('nav a[data-section]');
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
+
     // Highlight active section on scroll
     window.addEventListener('scroll', function() {
         const sections = [
@@ -90,19 +90,19 @@ document.addEventListener('DOMContentLoaded', function() {
             { element: document.querySelector('.events'), id: 'events' },
             { element: document.querySelector('.contact'), id: 'contact' }
         ];
-        
+
         const scrollPos = window.scrollY + 100; // Offset for header
         const navLinks = document.querySelectorAll('nav a[data-section]');
-        
+
         sections.forEach(section => {
             if (section.element) {
                 const sectionTop = section.element.offsetTop;
                 const sectionHeight = section.element.offsetHeight;
-                
+
                 if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
                     // Remove active class from all nav links
                     navLinks.forEach(link => link.classList.remove('active'));
-                    
+
                     // Add active class to current section nav link
                     const activeLink = document.querySelector(`nav a[data-section="${section.id}"]`);
                     if (activeLink) {
@@ -112,10 +112,10 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
+
     // Mobile menu toggle (if needed for future mobile improvements)
     let mobileMenuOpen = false;
-    
+
     // Add mobile menu button for smaller screens
     function addMobileMenu() {
         const nav = document.querySelector('nav');
@@ -123,11 +123,11 @@ document.addEventListener('DOMContentLoaded', function() {
         mobileMenuBtn.classList.add('mobile-menu-btn');
         mobileMenuBtn.innerHTML = '☰';
         mobileMenuBtn.setAttribute('aria-label', 'Toggle navigation menu');
-        
+
         mobileMenuBtn.addEventListener('click', function() {
             const navUl = nav.querySelector('ul');
             mobileMenuOpen = !mobileMenuOpen;
-            
+
             if (mobileMenuOpen) {
                 navUl.classList.add('mobile-menu-open');
                 mobileMenuBtn.innerHTML = '✕';
@@ -136,10 +136,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 mobileMenuBtn.innerHTML = '☰';
             }
         });
-        
+
         nav.prepend(mobileMenuBtn);
     }
-    
+
     // Check if mobile menu is needed
     function checkMobileMenu() {
         if (window.innerWidth <= 768) {
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     }
-    
+
     // Initial check and window resize listener
     checkMobileMenu();
     window.addEventListener('resize', checkMobileMenu);
