@@ -582,6 +582,134 @@ footer p:last-child {
   font-size: 0.9rem;
 }
 
+       
+        
+        .footer-info h3 {
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .footer-info p {
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+        
+        .footer-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+        
+        .footer-section h4 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+            opacity: 0.9;
+        }
+        
+        .footer-section ul li a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-section ul li a:hover {
+            color: var(--accent-color);
+        }
+        
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .social-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color 0.3s ease, transform 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .social-links a:hover {
+            color: var(--accent-color);
+            transform: translateX(5px);
+        }
+        
+        .social-icon {
+            font-size: 1.2rem;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 1.5rem;
+        }
+        
+        .footer-bottom hr {
+            border: none;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.2);
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-bottom-content {
+            text-align: center;
+        }
+        
+        .footer-bottom-content p {
+            margin-bottom: 0.5rem;
+            opacity: 0.8;
+        }
+        
+        .footer-credits {
+            font-size: 0.9rem;
+        }
+        
+        .footer-credits a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+        
+        .footer-credits a:hover {
+            color: var(--accent-color);
+        }
+        
+        /* Mobile Footer Styles */
+        @media (max-width: 768px) {
+            footer {
+                padding: 2rem 0 1rem 0;
+            }
+            
+            .footer-links {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .social-links {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .footer-bottom-content {
+                font-size: 0.9rem;
+            }
+        }
+  
+
 /* ─── Scrollbar Styling ───────────────────── */
 ::-webkit-scrollbar {
   width: 8px;
