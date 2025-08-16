@@ -4,85 +4,79 @@
  */
 
 document.addEventListener('DOMContentLoaded', function() {
-    const headerHTML = `
-        <header>
-            <div class="container">
-                <div class="header-content">
-                    <div class="header-brand">
-                        <img src="images/sfmr-logo.jpg" alt="ΣΦΜΡ" class="header-logo">
-                        <div class="header-title">
-                            <a href="index.html" class="brand-title-link" data-section="home">
-                                <h1>Σύλλογος Φίλων Μουσικής Ραφήνας</h1>
-                            </a>
-                            <span class="header-subtitle">Ενώνουμε τους λάτρεις της μουσικής</span>
-                        </div>
-                    </div>
-                    <nav>
-                        <ul>
-                            <li><a href="index.html" data-section="home">Αρχική</a></li>
-                            <li><a href="about.html" data-section="about">Σχετικά με εμάς</a></li>
-                            <li><a href="events-news.html" data-section="events">Εκδηλώσεις & Νέα</a></li>
-                            <li><a href="contact.html" data-section="contact">Επικοινωνία</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </header>
-    `;
+    // ... (Your headerHTML and header injection code remains the same) ...
 
-    // Insert header into the page
-    const headerContainer = document.getElementById('header-container');
-    if (headerContainer) {
-        headerContainer.innerHTML = headerHTML;
-    }
+    // Select all navigation links
+    const navLinks = document.querySelectorAll('nav a, .brand-title-link');
 
-    // Add smooth scrolling functionality for all navigation links
-    const navLinks = document.querySelectorAll('nav a[data-section], .brand-title-link[data-section]');
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
-
+            const href = this.getAttribute('href');
             const sectionId = this.getAttribute('data-section');
-            let targetElement;
 
-            // Map sections to actual elements
-            switch(sectionId) {
-                case 'home':
+            // Check if the link is an internal section link on the *current* page
+            // This condition ensures smooth scroll only for "home" on index.html
+            // and potentially other sections if they were on index.html
+            if (href && href.startsWith('#')) {
+                e.preventDefault(); // Prevent default only for internal hash links
+
+                let targetElement;
+                if (sectionId === 'home') {
                     targetElement = document.querySelector('.hero');
-                    break;
-                case 'about':
-                    targetElement = document.querySelector('.about');
-                    break;
-                case 'events':
-                    targetElement = document.querySelector('.events');
-                    break;
-                case 'contact':
-                    targetElement = document.querySelector('.contact');
-                    break;
-                default:
-                    targetElement = document.body;
-            }
-
-            if (targetElement) {
-                const headerHeight = document.querySelector('header').offsetHeight;
-                const targetPosition = targetElement.offsetTop - headerHeight;
-
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-
-                // Update active nav item (only for nav links, not brand link)
-                if (this.closest('nav')) {
-                    const navigationLinks = document.querySelectorAll('nav a[data-section]');
-                    navigationLinks.forEach(navLink => navLink.classList.remove('active'));
-                    this.classList.add('active');
                 }
+                // Add more cases here if other sections are on the index.html and use #links
+
+                if (targetElement) {
+                    const headerHeight = document.querySelector('header').offsetHeight;
+                    const targetPosition = targetElement.offsetTop - headerHeight;
+
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            } else if (sectionId && window.location.pathname.endsWith('index.html') || window.location.pathname === '/') {
+                // This block handles the case where you want 'data-section' links
+                // to smooth scroll *only if* you are on index.html.
+                // If you remove the 'if' condition here, these links will always
+                // smooth scroll even if they are meant for new pages.
+
+                // For example, if you click "About" from index.html, it will smooth scroll
+                // instead of going to about.html. This is what's currently happening.
+                // To fix this, you need to be explicit.
+
+                // If the link is for a different page, let the browser handle it.
+                // Only prevent default and smooth scroll if it's the 'home' link
+                // AND we are on the index page.
+
+                if (sectionId === 'home') { // Only apply smooth scroll for 'home'
+                     e.preventDefault();
+                    let targetElement = document.querySelector('.hero');
+                    if (targetElement) {
+                        const headerHeight = document.querySelector('header').offsetHeight;
+                        const targetPosition = targetElement.offsetTop - headerHeight;
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+                // For 'about', 'events', 'contact', the default behavior (navigating to the href) will happen
+                // because e.preventDefault() is NOT called for them here.
+
+            }
+            // Update active nav item (only for nav links, not brand link)
+            // This part might need adjustment if you want active states across different pages.
+            if (this.closest('nav')) {
+                const navigationLinks = document.querySelectorAll('nav a[data-section]');
+                navigationLinks.forEach(navLink => navLink.classList.remove('active'));
+                this.classList.add('active');
             }
         });
     });
 
-    // Highlight active section on scroll
+    // Highlight active section on scroll (this is for *within* index.html)
+    // This functionality will only work on the index.html page.
     window.addEventListener('scroll', function() {
         const sections = [
             { element: document.querySelector('.hero'), id: 'home' },
@@ -100,10 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const sectionHeight = section.element.offsetHeight;
 
                 if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
-                    // Remove active class from all nav links
                     navLinks.forEach(link => link.classList.remove('active'));
-
-                    // Add active class to current section nav link
                     const activeLink = document.querySelector(`nav a[data-section="${section.id}"]`);
                     if (activeLink) {
                         activeLink.classList.add('active');
