@@ -9,11 +9,13 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="container">
                 <div class="header-content">
                     <div class="header-brand">
-                        <img src="images/sfmr-logo.jpg" alt="ΣΦΜΡ" class="header-logo">
-                        <div class="header-title">
-                            <h1>Σύλλογος Φίλων Μουσικής Ραφήνας</h1>
-                            <span class="header-subtitle">Ενώνουμε τους λάτρεις της μουσικής</span>
-                        </div>
+                        <a href="index.html" class="brand-link" data-section="home">
+                            <img src="images/sfmr-logo.jpg" alt="ΣΦΜΡ" class="header-logo">
+                            <div class="header-title">
+                                <h1>Σύλλογος Φίλων Μουσικής Ραφήνας</h1>
+                                <span class="header-subtitle">Ενώνουμε τους λάτρεις της μουσικής</span>
+                            </div>
+                        </a>
                     </div>
                     <nav>
                         <ul>
@@ -34,8 +36,8 @@ document.addEventListener('DOMContentLoaded', function() {
         headerContainer.innerHTML = headerHTML;
     }
     
-    // Add smooth scrolling functionality
-    const navLinks = document.querySelectorAll('nav a[data-section]');
+    // Add smooth scrolling functionality for all navigation links
+    const navLinks = document.querySelectorAll('nav a[data-section], .brand-link[data-section]');
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
@@ -70,9 +72,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     behavior: 'smooth'
                 });
                 
-                // Update active nav item
-                navLinks.forEach(navLink => navLink.classList.remove('active'));
-                this.classList.add('active');
+                // Update active nav item (only for nav links, not brand link)
+                if (this.closest('nav')) {
+                    const navigationLinks = document.querySelectorAll('nav a[data-section]');
+                    navigationLinks.forEach(navLink => navLink.classList.remove('active'));
+                    this.classList.add('active');
+                }
             }
         });
     });
@@ -87,6 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
         ];
         
         const scrollPos = window.scrollY + 100; // Offset for header
+        const navLinks = document.querySelectorAll('nav a[data-section]');
         
         sections.forEach(section => {
             if (section.element) {
