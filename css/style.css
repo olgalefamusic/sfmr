@@ -635,14 +635,32 @@ footer p:last-child {
             gap: 0.5rem;
         }
         
-        .social-links a {
-            color: var(--text-light);
-            text-decoration: none;
-            transition: color 0.3s ease, transform 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
+       .social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 0;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--brand-300);
+    transform: translateX(5px);
+}
+
+.social-icon {
+    font-size: 1.1rem;
+    width: 20px;
+    display: inline-block;
+}
         
         .social-links a:hover {
             color: var(--accent-color);
