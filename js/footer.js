@@ -57,6 +57,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     <hr>
                     <div class="footer-bottom-content">
                         <p>&copy; ${currentYear} Σύλλογος Φίλων Μουσικής Ραφήνας. Όλα τα δικαιώματα διατηρούνται.</p>
+                        <div class="footer-legal-links">
+                            <a href="privacy-policy.html">Πολιτική Απορρήτου</a> | 
+                            <a href="terms-of-service.html">Όροι Χρήσης</a>
+                        </div>
                         <p class="footer-credits">
                             Ραφήνα, Αττική | 
                             <a href="mailto:info@sfmrafinas.gr">info@sfmrafinas.gr</a> | 
@@ -68,13 +72,12 @@ document.addEventListener('DOMContentLoaded', function() {
         </footer>
     `;
     
+   
     // Insert footer into the page
     const footerContainer = document.getElementById('footer-container');
     if (footerContainer) {
         footerContainer.innerHTML = footerHTML;
     }
-    
-  
     
     // Add footer styles to the document head
     document.head.insertAdjacentHTML('beforeend', footerStyles);
