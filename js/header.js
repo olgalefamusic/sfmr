@@ -1,7 +1,26 @@
 /**
  * Header Component for Σύλλογος Φίλων Μουσικής Ραφήνας
  * This file creates and injects the header navigation into the page
+ * Updated with font loading optimization
  */
+
+// Function to check if fonts are loaded
+function checkFontsLoaded() {
+    if (document.fonts && document.fonts.ready) {
+        return document.fonts.ready;
+    }
+    
+    // Fallback for browsers without font loading API
+    return new Promise((resolve) => {
+        if (document.readyState === 'complete') {
+            setTimeout(resolve, 100); // Small delay to ensure fonts are applied
+        } else {
+            window.addEventListener('load', () => {
+                setTimeout(resolve, 100);
+            });
+        }
+    });
+}
 
 document.addEventListener('DOMContentLoaded', function() {
     const headerHTML = `
@@ -30,12 +49,20 @@ document.addEventListener('DOMContentLoaded', function() {
         </header>
     `;
 
-    // Insert header into the page
-    const headerContainer = document.getElementById('header-container');
-    if (headerContainer) {
-        headerContainer.innerHTML = headerHTML;
-    }
+    // Wait for fonts to be loaded before inserting header
+    checkFontsLoaded().then(() => {
+        // Insert header into the page
+        const headerContainer = document.getElementById('header-container');
+        if (headerContainer) {
+            headerContainer.innerHTML = headerHTML;
+            
+            // Initialize navigation after header is inserted
+            initializeNavigation();
+        }
+    });
+});
 
+function initializeNavigation() {
     // Select all navigation links
     const navLinks = document.querySelectorAll('nav a, .brand-title-link');
 
@@ -64,10 +91,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     });
                 }
             } else if (sectionId && (window.location.pathname.endsWith('index.html') || window.location.pathname === '/')) {
-                // This block is slightly problematic if you *also* have sections on other pages
-                // that you want to scroll to using data-section.
-                // However, based on previous conversation, 'home' is the primary one for smooth scroll.
-
                 if (sectionId === 'home') { // Only apply smooth scroll for 'home' on the index page
                    e.preventDefault();
                     let targetElement = document.querySelector('.hero');
@@ -80,8 +103,6 @@ document.addEventListener('DOMContentLoaded', function() {
                         });
                     }
                 }
-                // For 'about', 'events', 'contact' (when on index.html), the default navigation will occur
-                // because e.preventDefault() is NOT called in this 'else if' block for them.
             }
             // Update active nav item (only for nav links, not brand link)
             if (this.closest('nav')) {
@@ -120,12 +141,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Mobile menu toggle
+    // Mobile menu functionality
+    initializeMobileMenu();
+}
+
+function initializeMobileMenu() {
     let mobileMenuOpen = false;
 
     function addMobileMenu() {
         const nav = document.querySelector('nav');
-        // Ensure nav exists before trying to prepend
         if (!nav) {
             console.warn("Navigation element (nav) not found. Mobile menu not added.");
             return;
@@ -137,7 +161,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         mobileMenuBtn.addEventListener('click', function() {
             const navUl = nav.querySelector('ul');
-            if (navUl) { // Ensure ul exists before manipulating
+            if (navUl) {
                 mobileMenuOpen = !mobileMenuOpen;
 
                 if (mobileMenuOpen) {
@@ -158,20 +182,19 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!document.querySelector('.mobile-menu-btn')) {
                 addMobileMenu();
             }
-        } else { // If screen size goes above 768px and mobile menu button exists, remove it
+        } else {
             const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
             if (mobileMenuBtn) {
                 mobileMenuBtn.remove();
-                // Also ensure the mobile-menu-open class is removed if the menu was open
                 const navUl = document.querySelector('nav ul');
                 if (navUl) {
                     navUl.classList.remove('mobile-menu-open');
                 }
-                mobileMenuOpen = false; // Reset state
+                mobileMenuOpen = false;
             }
         }
     }
 
     checkMobileMenu();
     window.addEventListener('resize', checkMobileMenu);
-});
+}
